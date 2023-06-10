@@ -6,9 +6,9 @@ export default function Home() {
   return (
     <Common.Container color="secondary">
       <Styles.Box>
-        <p>Page one</p>
+        <p>Page two</p>
 
-        <Link href="/page-two">go to page two</Link>
+        <Link href="/">go back to page one</Link>
       </Styles.Box>
     </Common.Container>
   )
