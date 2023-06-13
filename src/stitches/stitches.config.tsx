@@ -1,7 +1,10 @@
-import { createStitches } from "@stitches/react";
+import {createStitches} from "@stitches/react";
 
 const stitches = createStitches({
   theme: {
+    radii: {
+      m: "8px",
+    },
     colors: {
       neutral100: "#F4F8F6",
       neutral200: "#D9DFDB",
@@ -47,4 +50,4 @@ const stitches = createStitches({
   },
 });
 
-export const { styled, theme, globalCss, keyframes, css, getCssText } = stitches;
+export const {styled, theme, globalCss, keyframes, css, getCssText} = stitches;

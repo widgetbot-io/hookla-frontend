@@ -1,4 +1,4 @@
-import { styled, theme } from "stitches-config";
+import {styled} from "stitches-config";
 
 export const Box = styled('div', {
   border: `2px solid red`,

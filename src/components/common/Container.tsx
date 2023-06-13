@@ -1,15 +1,15 @@
-import { styled, theme } from 'stitches-config';
+import {styled} from 'stitches-config';
 
 export const Container = styled('div', {
   variants: {
     color: {
       primary: {
-        backgroundColor: theme.colors.bgPrimary,
-        color: theme.colors.textPrimary,
+        backgroundColor: "red",
+        color: "orange",
       },
       secondary: {
-        backgroundColor: theme.colors.bgSecondary,
-        color: theme.colors.textSecondary,
+        backgroundColor: "blue",
+        color: "pink",
       },
     },
   },
