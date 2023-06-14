@@ -1,7 +1,6 @@
-import {getCssText} from 'stitches-config';
+import {getCssText, globalCss} from 'stitches-config';
+import { normalize } from 'stitches-normalize-css';
 
-export const StyleSheet = () => {
-  return (
-    <style id='stitches' dangerouslySetInnerHTML={{__html: getCssText()}}/>
-  );
-}
+globalCss(...normalize)();
+
+export const StyleSheet = () => ( <style id='stitches' dangerouslySetInnerHTML={{__html: getCssText()}}/> )

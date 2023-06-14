@@ -29,6 +29,9 @@ dependencies:
   react-dom:
     specifier: 18.2.0
     version: 18.2.0(react@18.2.0)
+  stitches-normalize-css:
+    specifier: ^1.2.0
+    version: 1.2.0
   typescript:
     specifier: 5.1.3
     version: 5.1.3
@@ -2324,6 +2327,10 @@ packages:
   /source-map-js@1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
     engines: {node: '>=0.10.0'}
+    dev: false
+
+  /stitches-normalize-css@1.2.0:
+    resolution: {integrity: sha512-X0AmvKQcK2gXSCwmYzMQSqXA+9Yz+Nl7UUjuQ/Dkx3c77B9KyzGUFYNIiZ4ZW1SGRInDA/vI1HTUQk3ezkXDpA==}
     dev: false
 
   /stop-iteration-iterator@1.0.0:
