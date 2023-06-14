@@ -48,5 +48,5 @@ export function Navbar() {
         </Box>
       </Container>
     </Nav>
-  )
+  );
 }

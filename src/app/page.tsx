@@ -1,9 +1,13 @@
 import * as Common from '@/components/common';
+import * as Home from '@/components/home';
 
-export default function Home() {
+export default function Index() {
   return (
-    <Common.Container>
-      <Common.Navbar/>
-    </Common.Container>
+    <>
+      <Home.Hero />
+      <Common.Container>
+        Hookla
+      </Common.Container>
+    </>
   )
 }
