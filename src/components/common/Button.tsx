@@ -1,9 +1,10 @@
 import {styled, theme} from 'stitches-config';
 
 export const Button = styled('button', {
-  padding: "16px 24px",
-  outline: "none",
-  border: "1px solid " + theme.colors.neutral900,
+  padding: '16px 24px',
+  outline: 'none',
+  border: '1px solid',
+  borderColor: theme.colors.neutral900,
   borderRadius: theme.radii.m,
   fontSize: theme.fontSizes.m,
 
@@ -20,16 +21,16 @@ export const Button = styled('button', {
     },
     arrow: {
       true: {
-        display: "flex",
-        alignItems: "center",
+        display: 'flex',
+        alignItems: 'center',
 
-        "&::after": {
-          content: "",
-          display: "block",
-          width: "32px",
-          height: "13px",
-          backgroundImage: "url(/arrow.svg)",
-          marginLeft: "8px",
+        '&::after': {
+          content: '',
+          display: 'block',
+          width: '32px',
+          height: '13px',
+          backgroundImage: 'url(/arrow.svg)',
+          marginLeft: '8px',
         }
       },
     },

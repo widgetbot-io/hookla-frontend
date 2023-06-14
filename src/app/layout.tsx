@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function RootLayout({children}: Props) {
   return (
-    <html lang="en">
+    <html lang='en'>
     <head>
       <StyleSheet/>
     </head>
