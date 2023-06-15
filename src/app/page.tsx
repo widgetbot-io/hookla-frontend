@@ -6,7 +6,7 @@ export default function Index() {
     <>
       <Home.Hero />
       <Common.Container>
-        <Home.Configurator />
+        <Home.Configure />
       </Common.Container>
     </>
   )
