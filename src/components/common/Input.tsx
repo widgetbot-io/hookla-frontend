@@ -26,4 +26,8 @@ export const Input = styled('input', {
       maxWidth: '312px',
     },
   },
+
+  '&[type=checkbox]': {
+    cursor: 'pointer',
+  }
 });

@@ -4,9 +4,9 @@ import * as Home from '@/components/home';
 export default function Index() {
   return (
     <>
-      <Home.Hero />
+      <Home.HeroSection />
       <Common.Container>
-        <Home.Configure />
+        <Home.ConfigureSection />
       </Common.Container>
     </>
   )

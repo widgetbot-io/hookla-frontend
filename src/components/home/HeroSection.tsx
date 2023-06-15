@@ -1,7 +1,7 @@
 import {styled, theme} from 'stitches-config';
 import * as Common from '@/components/common';
 
-const HeroSection = styled(Common.Box, {
+const Section = styled(Common.Box, {
   height: '100%',
   minHeight: '100vh',
   background: theme.colors.green400,
@@ -13,10 +13,10 @@ const HeroSection = styled(Common.Box, {
 
 
 
-export function Hero() {
+export function HeroSection() {
   return (
-    <HeroSection>
+    <Section>
       <Common.Text type='h1' css={{maxWidth: '400px'}}>Keep your community informed</Common.Text>
-    </HeroSection>
+    </Section>
   );
 }

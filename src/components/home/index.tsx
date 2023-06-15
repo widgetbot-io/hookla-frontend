@@ -1,2 +1,2 @@
-export * from './Hero';
-export * from './Configure';
+export * from './HeroSection';
+export * from './ConfigureSection';
