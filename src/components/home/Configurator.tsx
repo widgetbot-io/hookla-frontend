@@ -1,4 +1,5 @@
 import {styled, theme} from 'stitches-config';
+import Image from 'next/image'
 import * as Common from '@/components/common';
 
 const ConfiguratorSection = styled(Common.Box, {
@@ -29,7 +30,15 @@ const WebhookBox = styled(Common.Box, {
 });
 
 const WebhookArrow = styled(Common.Box, {
-  display: 'inline-block',
+  display: 'inline-flex',
+  alignItems: 'center',
+  background: theme.colors.neutral100,
+  borderTopRightRadius: theme.radii.m,
+  borderBottomRightRadius: theme.radii.m,
+  border: '1px solid',
+  borderLeft: 'none',
+  borderColor: theme.colors.neutral900,
+  paddingRight: '32px',
 });
 
 const WebhookURLInput = styled(Common.Input, {
@@ -44,8 +53,9 @@ export function Configurator() {
   return (
     <ConfiguratorSection>
       <WebhookBox>
+        <WebhookURLInput placeholder='Webhook URL' />
         <WebhookArrow>
-          <WebhookURLInput placeholder='Webhook URL' />
+          <Image src="/arrow_l.svg" width={65} height={22} alt="Arrow" />
         </WebhookArrow>
       </WebhookBox>
     </ConfiguratorSection>

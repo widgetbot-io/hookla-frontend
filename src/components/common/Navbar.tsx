@@ -14,6 +14,7 @@ const Nav = styled('nav', {
   padding: '24px 0',
   borderBottom: '1px solid',
   borderColor: theme.colors.neutral400,
+  zIndex: 10,
 });
 
 const Brand = styled('div', {
