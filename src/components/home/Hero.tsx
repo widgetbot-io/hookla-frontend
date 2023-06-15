@@ -8,12 +8,15 @@ const HeroSection = styled(Common.Box, {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
+  textAlign: 'center',
 });
+
+
 
 export function Hero() {
   return (
     <HeroSection>
-      <Common.Text>Keep your community informed</Common.Text>
+      <Common.Text type='h1' css={{maxWidth: '400px'}}>Keep your community informed</Common.Text>
     </HeroSection>
   );
 }

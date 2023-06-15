@@ -48,6 +48,7 @@ const stitches = createStitches({
       s: '16px',
       m: '24px',
       l: '32px',
+      xl: '64px',
     },
   },
 });
