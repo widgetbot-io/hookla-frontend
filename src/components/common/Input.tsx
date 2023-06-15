@@ -3,6 +3,8 @@ import {styled, theme} from 'stitches-config';
 export const Input = styled('input', {
   outline: 'none',
   padding: '16px',
+  border: '1px solid',
+  borderColor: theme.colors.neutral900,
   borderRadius: theme.radii.m,
   background: theme.colors.neutral100,
 
@@ -10,8 +12,7 @@ export const Input = styled('input', {
     overflow: 'hidden',
     whiteSpace: 'nowrap',
     textOverflow: 'ellipsis',
-    fontSize: theme.fontSizes.m,
-    border: '1px solid',
+    fontSize: theme.fontSizes.sm,
     borderColor: theme.colors.neutral500,
     margin: '0 auto 0 16px',
     backgroundImage: 'url(/search.svg)',

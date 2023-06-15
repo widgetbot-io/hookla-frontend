@@ -1,7 +1,7 @@
 import {styled, theme} from 'stitches-config';
 import * as Common from '@/components/common';
 
-const Background = styled(Common.Box, {
+const HeroSection = styled(Common.Box, {
   height: '100%',
   minHeight: '100vh',
   background: theme.colors.green400,
@@ -12,8 +12,8 @@ const Background = styled(Common.Box, {
 
 export function Hero() {
   return (
-    <Background>
+    <HeroSection>
       <Common.Text>Keep your community informed</Common.Text>
-    </Background>
+    </HeroSection>
   );
 }

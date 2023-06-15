@@ -44,8 +44,10 @@ const stitches = createStitches({
       red900: '#A00000',
     },
     fontSizes: {
-      m: '14px',
-      l: '16px',
+      sm: '14px',
+      s: '16px',
+      m: '24px',
+      l: '32px',
     },
   },
 });

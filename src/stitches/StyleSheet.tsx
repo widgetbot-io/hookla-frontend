@@ -1,4 +1,4 @@
-import {getCssText, globalCss} from 'stitches-config';
+import {getCssText, globalCss, theme} from 'stitches-config';
 import { normalize } from 'stitches-normalize-css';
 
 globalCss(...[
@@ -6,6 +6,7 @@ globalCss(...[
   {
     'body': {
       'margin': 0,
+      'background': theme.colors.neutral100,
     },
     '*, *::before, *::after' : {
       boxSizing: 'border-box',

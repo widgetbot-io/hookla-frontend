@@ -6,7 +6,7 @@ export const Button = styled('button', {
   border: '1px solid',
   borderColor: theme.colors.neutral900,
   borderRadius: theme.radii.m,
-  fontSize: theme.fontSizes.m,
+  fontSize: theme.fontSizes.sm,
 
   variants: {
     type: {
