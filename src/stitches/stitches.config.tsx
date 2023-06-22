@@ -4,6 +4,7 @@ const stitches = createStitches({
   theme: {
     radii: {
       m: '8px',
+      c: '999px',
     },
     colors: {
       neutral100: '#F4F8F6',
