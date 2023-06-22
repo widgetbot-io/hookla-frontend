@@ -4,7 +4,7 @@ export const Text = styled('p', {
   margin: 0,
 
   variants: {
-    type: {
+    size: {
       p: {
         fontSize: theme.fontSizes.s,
       },
@@ -12,7 +12,13 @@ export const Text = styled('p', {
       h1: {
         fontSize: theme.fontSizes.xl,
         color: theme.colors.magenta400,
+        fontWeight: 400,
       },
+
+      h2: {
+        fontSize: theme.fontSizes.l,
+        fontWeight: 400,
+      }
     },
   },
 });

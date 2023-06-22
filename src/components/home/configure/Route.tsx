@@ -1,5 +1,5 @@
 import Image from "next/image";
-import {styled} from "stitches-config";
+import {styled, theme} from "stitches-config";
 import * as Common from "@/components/common";
 import {RouteOption} from "./RouteOption";
 
@@ -11,11 +11,16 @@ const RouteSection = styled(Common.Box, {
 
 const RouteGroup = styled(Common.Box, {
   flexGrow: 1,
+});
+
+const RouteScroll = styled(Common.Box, {
   maxHeight: '480px',
   overflow: 'auto',
+  marginTop: '32px',
+  textAlign: 'left',
 
-  '& > *:not(:last-child)': {
-    marginBottom: '8px',
+  '& > *:not(:first-child)': {
+    marginTop: '8px',
   }
 });
 
@@ -23,17 +28,25 @@ export function Route() {
   return (
     <RouteSection>
       <RouteGroup css={{paddingRight: '32px'}}>
-        <RouteOption />
-        <RouteOption />
-        <RouteOption />
-        <RouteOption />
+        <Common.Text size='h2' as='h2' css={{color: theme.colors.neutral900}}>Select your providers.</Common.Text>
+        <Common.Text size='p' css={{color: theme.colors.neutral700, marginTop: '16px'}}>Description of what a provider is.</Common.Text>
+        <RouteScroll>
+          <RouteOption />
+          <RouteOption />
+          <RouteOption />
+          <RouteOption />
+        </RouteScroll>
       </RouteGroup>
       <Image src='/arrow_xl.svg' width={124} height={22} alt='Arrow' />
-      <RouteGroup css={{paddingLeft: '32px'}}>
-        <RouteOption />
-        <RouteOption />
-        <RouteOption />
-        <RouteOption />
+      <RouteGroup css={{paddingLeft: '32px', textAlign: 'right'}}>
+        <Common.Text size='h2' as='h2' css={{color: theme.colors.neutral900}}>Select your destinations.</Common.Text>
+        <Common.Text size='p' css={{color: theme.colors.neutral700, marginTop: '16px'}}>Description of what a destination is.</Common.Text>
+        <RouteScroll>
+          <RouteOption />
+          <RouteOption />
+          <RouteOption />
+          <RouteOption />
+        </RouteScroll>
       </RouteGroup>
     </RouteSection>
   );

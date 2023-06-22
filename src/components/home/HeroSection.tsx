@@ -16,7 +16,7 @@ const Section = styled(Common.Box, {
 export function HeroSection() {
   return (
     <Section>
-      <Common.Text type='h1' css={{maxWidth: '400px'}}>Keep your community informed</Common.Text>
+      <Common.Text size='h1' as='h1' css={{maxWidth: '400px'}}>Keep your community informed</Common.Text>
     </Section>
   );
 }
