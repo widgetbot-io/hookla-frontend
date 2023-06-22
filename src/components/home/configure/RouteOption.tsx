@@ -4,8 +4,9 @@ import {useState} from 'react';
 import {styled, theme} from "stitches-config"
 import * as Common from "@/components/common";
 
-const Option = styled('label', {
-  display: 'block',
+const RouteBox = styled('label', {
+  display: 'flex',
+  alignItems: 'center',
   width: '100%',
   background: theme.colors.magenta400,
   border: '1px solid',
@@ -41,6 +42,20 @@ const RouteCheckbox = styled(Common.Input, {
   },
 });
 
+const RouteMeta = styled('div', {
+  flexGrow: 1,
+});
+
+const RouteIcon = styled('div', {
+  height: '64px',
+  width: '64px',
+  background: theme.colors.magenta300,
+  border: '1px solid',
+  borderColor: theme.colors.magenta900,
+  borderRadius: theme.radii.c,
+  marginRight: '16px',
+})
+
 export function RouteOption() {
   const [isChecked, setIsChecked] = useState(false);
 
@@ -49,9 +64,13 @@ export function RouteOption() {
   }
 
   return (
-    <Option>
+    <RouteBox>
+      <RouteIcon />
+      <RouteMeta>
+        <Common.Text css={{color: theme.colors.magenta900}}>Provider</Common.Text>
+        <Common.Text css={{color: theme.colors.magenta700}}>Provider Description</Common.Text>
+      </RouteMeta>
       <RouteCheckbox type='checkbox' checked={isChecked} onChange={handleChange}/>
-      <p>This checkbox is {isChecked ? 'checked' : 'unchecked'}</p>
-    </Option>
+    </RouteBox>
   );
 }
