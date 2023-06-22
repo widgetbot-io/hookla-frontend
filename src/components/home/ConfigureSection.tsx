@@ -12,6 +12,7 @@ export function ConfigureSection() {
     <Section>
       <Configure.Webhook />
       <Configure.Route />
+      <Configure.Go />
     </Section>
   )
 }

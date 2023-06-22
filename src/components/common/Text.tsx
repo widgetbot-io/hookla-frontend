@@ -18,6 +18,11 @@ export const Text = styled('p', {
       h2: {
         fontSize: theme.fontSizes.l,
         fontWeight: 400,
+      },
+
+      h3: {
+        fontSize: theme.fontSizes.m,
+        fontWeight: 400,
       }
     },
   },

@@ -11,8 +11,6 @@ const Section = styled(Common.Box, {
   textAlign: 'center',
 });
 
-
-
 export function HeroSection() {
   return (
     <Section>
