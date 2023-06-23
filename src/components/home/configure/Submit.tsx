@@ -10,7 +10,7 @@ const GoSection = styled(Common.Box, {
   borderRadius: theme.radii.m,
   border: '1px solid',
   borderColor: theme.colors.neutral900,
-  marginTop: '32px',
+  marginTop: '64px',
 });
 
 export function Submit() {
