@@ -1,7 +1,7 @@
 import {styled, theme} from 'stitches-config';
 import * as Common from '@/components/common';
 
-const Section = styled(Common.Box, {
+const Section = styled('section', {
   height: '100%',
   minHeight: '100vh',
   background: theme.colors.green400,

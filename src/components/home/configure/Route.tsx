@@ -3,17 +3,17 @@ import {styled, theme} from "stitches-config";
 import * as Common from "@/components/common";
 import {RouteOption} from "./RouteOption";
 
-const RouteSection = styled(Common.Box, {
+const RouteSection = styled('section', {
   display: 'flex',
   marginTop: '32px',
   alignItems: 'center',
 });
 
-const RouteGroup = styled(Common.Box, {
+const RouteGroup = styled('div', {
   flexGrow: 1,
 });
 
-const RouteScroll = styled(Common.Box, {
+const RouteScroll = styled('div', {
   maxHeight: '480px',
   overflow: 'auto',
   marginTop: '32px',

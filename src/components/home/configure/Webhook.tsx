@@ -2,7 +2,7 @@ import Image from "next/image";
 import {styled, theme} from "stitches-config";
 import * as Common from "@/components/common";
 
-const WebhookBox = styled(Common.Box, {
+const WebhookBox = styled('div', {
   position: 'relative',
   display: 'flex',
   justifyContent: 'center',
@@ -28,8 +28,8 @@ const WebhookArrow = styled(Common.Box, {
   display: 'inline-flex',
   alignItems: 'center',
   background: theme.colors.neutral100,
-  borderTopRightRadius: theme.radii.m,
-  borderBottomRightRadius: theme.radii.m,
+  borderBottomLeftRadius: 0,
+  borderTopLeftRadius: 0,
   border: '1px solid',
   borderLeft: 'none',
   borderColor: theme.colors.neutral900,

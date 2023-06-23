@@ -1,9 +1,8 @@
 import {styled, theme} from 'stitches-config';
-import {Button} from './Button';
 import {Container} from './Container';
-import {Text} from './Text';
-import {Box} from './Box';
+import {Button} from './Button';
 import {Input} from './Input';
+import {Text} from './Text';
 
 const Nav = styled('nav', {
   position: 'fixed',
@@ -32,21 +31,27 @@ const Brand = styled('div', {
   },
 });
 
+const Bar = styled('div', {
+  flexGrow: '1',
+  display: 'flex',
+  justifyContent: 'flex-end',
+})
+
 export function Navbar() {
   return (
     <Nav>
       <Container css={{display: 'flex', alignItems: 'center'}}>
         <Brand>
-          <Box>
+          <div>
             <Text>Hookla</Text>
             <Text css={{color: theme.colors.magenta400}}>Keep your community informed.</Text>
-          </Box>
+          </div>
         </Brand>
-        <Box css={{flexGrow: '1', display: 'flex', justifyContent: 'flex-end'}}>
+        <Bar>
           <Input placeholder='Search documentation' type='search' />
           <Button type='secondary'>Login</Button>
           <Button css={{marginLeft: '16px'}} type='primary'>Sign Up</Button>
-        </Box>
+        </Bar>
       </Container>
     </Nav>
   );
