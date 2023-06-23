@@ -13,7 +13,7 @@ const GoSection = styled(Common.Box, {
   marginTop: '32px',
 });
 
-export function Go() {
+export function Submit() {
   return (
     <GoSection>
       <Common.Text size='h3' as='h3'>Ready to go?</Common.Text>

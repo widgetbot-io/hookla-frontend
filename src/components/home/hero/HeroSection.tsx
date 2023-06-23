@@ -1,14 +1,13 @@
 import {styled, theme} from 'stitches-config';
 import * as Common from '@/components/common';
 
-const Section = styled('section', {
-  height: '100%',
-  minHeight: '100vh',
+const Section = styled(Common.Section, {
   background: theme.colors.green400,
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
   textAlign: 'center',
+  paddingTop: '99px',
 });
 
 export function HeroSection() {
