@@ -6,22 +6,22 @@ export const Text = styled('p', {
   variants: {
     size: {
       p: {
-        fontSize: theme.fontSizes.s,
+        fontSize: theme.fontSizes.small,
       },
 
       h1: {
-        fontSize: theme.fontSizes.xl,
+        fontSize: theme.fontSizes.xlarge,
         color: theme.colors.magenta400,
         fontWeight: 400,
       },
 
       h2: {
-        fontSize: theme.fontSizes.l,
+        fontSize: theme.fontSizes.large,
         fontWeight: 400,
       },
 
       h3: {
-        fontSize: theme.fontSizes.m,
+        fontSize: theme.fontSizes.medium,
         fontWeight: 400,
       }
     },

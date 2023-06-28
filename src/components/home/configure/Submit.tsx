@@ -7,7 +7,7 @@ const GoSection = styled(Common.Box, {
   alignItems: 'center',
   background: theme.colors.green400,
   padding: '32px',
-  borderRadius: theme.radii.m,
+  borderRadius: theme.radii.medium,
   border: '1px solid',
   borderColor: theme.colors.neutral900,
   marginTop: '64px',

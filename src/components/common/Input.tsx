@@ -5,14 +5,14 @@ export const Input = styled('input', {
   padding: '16px',
   border: '1px solid',
   borderColor: theme.colors.neutral900,
-  borderRadius: theme.radii.m,
+  borderRadius: theme.radii.medium,
   background: theme.colors.neutral100,
 
   '&[type=search]': {
     overflow: 'hidden',
     whiteSpace: 'nowrap',
     textOverflow: 'ellipsis',
-    fontSize: theme.fontSizes.sm,
+    fontSize: theme.fontSizes.xsmall,
     borderColor: theme.colors.neutral500,
     margin: '0 auto 0 16px',
     backgroundImage: 'url(/search.svg)',

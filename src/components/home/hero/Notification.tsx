@@ -6,7 +6,7 @@ const NotificationBox = styled(Common.Box, {
   background: theme.colors.green400,
   padding: '24px',
   textAlign: 'left',
-  fontSize: theme.fontSizes.s,
+  fontSize: theme.fontSizes.small,
 
   '&:not(:first-child)': {
     marginTop: '8px',

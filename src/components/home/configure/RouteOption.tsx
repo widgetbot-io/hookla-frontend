@@ -11,7 +11,7 @@ const RouteBox = styled('label', {
   background: theme.colors.magenta400,
   border: '1px solid',
   borderColor: theme.colors.magenta900,
-  borderRadius: theme.radii.m,
+  borderRadius: theme.radii.medium,
   padding: '32px',
   cursor: 'pointer',
   userSelect: 'none',
@@ -23,7 +23,7 @@ const RouteCheckbox = styled(Common.Input, {
   padding: '0',
   background: theme.colors.magenta400,
   border: '1px solid',
-  borderRadius: theme.radii.c,
+  borderRadius: theme.radii.circle,
   borderColor: theme.colors.magenta900,
 
   '&::before': {
@@ -32,7 +32,7 @@ const RouteCheckbox = styled(Common.Input, {
     height: '16px',
     width: '16px',
     background: theme.colors.green400,
-    borderRadius: theme.radii.c,
+    borderRadius: theme.radii.circle,
     transform: 'scale(0)',
     transition: '.1s ease-in-out transform',
   },
@@ -52,7 +52,7 @@ const RouteIcon = styled('div', {
   background: theme.colors.magenta300,
   border: '1px solid',
   borderColor: theme.colors.magenta900,
-  borderRadius: theme.radii.c,
+  borderRadius: theme.radii.circle,
   marginRight: '16px',
 })
 

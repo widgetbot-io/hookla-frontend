@@ -19,7 +19,7 @@ const Nav = styled('nav', {
 const Brand = styled('div', {
   display: 'flex',
   alignItems: 'center',
-  fontSize: theme.fontSizes.sm,
+  fontSize: theme.fontSizes.xsmall,
 
   '&::before': {
     content: '',

@@ -37,7 +37,7 @@ const WebhookArrow = styled(Common.Box, {
 });
 
 const WebhookURLInput = styled(Common.Input, {
-  fontSize: theme.fontSizes.l,
+  fontSize: theme.fontSizes.large,
   padding: '32px',
   borderRight: 'none',
   borderTopRightRadius: 0,

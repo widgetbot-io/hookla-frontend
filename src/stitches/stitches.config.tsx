@@ -4,8 +4,8 @@ const stitches = createStitches({
   theme: {
     radii: {
       small: '4px',
-      m: '8px',
-      c: '999px',
+      medium: '8px',
+      circle: '999px',
     },
     colors: {
       neutral100: '#F4F8F6',
@@ -46,11 +46,11 @@ const stitches = createStitches({
       red900: '#A00000',
     },
     fontSizes: {
-      sm: '14px',
-      s: '16px',
-      m: '24px',
-      l: '32px',
-      xl: '64px',
+      xsmall: '14px',
+      small: '16px',
+      medium: '24px',
+      large: '32px',
+      xlarge: '64px',
     },
   },
 });
