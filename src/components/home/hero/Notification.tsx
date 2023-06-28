@@ -40,12 +40,16 @@ const NotificationIcon = styled('div', {
   marginRight: '8px',
 });
 
-export function Notification() {
+type NotificationProps = {
+  name: string;
+};
+
+export function Notification(props: NotificationProps) {
   return (
     <NotificationBox>
       <NotificationUser>
         <NotificationPicture />
-        <Common.Text size='p' as='p' css={{color: theme.colors.green700}}>John Doe</Common.Text>
+        <Common.Text size='p' as='p' css={{color: theme.colors.green700}}>{props.name}</Common.Text>
       </NotificationUser>
       <Common.Text size='p' as='p' css={{color: theme.colors.magenta400}}>fix: Channel</Common.Text>
       <NotificationFooter>
