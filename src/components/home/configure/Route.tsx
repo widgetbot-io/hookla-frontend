@@ -49,5 +49,5 @@ export function Route() {
         </RouteScroll>
       </RouteGroup>
     </RouteSection>
-  );
+  )
 }

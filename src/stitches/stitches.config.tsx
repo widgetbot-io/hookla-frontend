@@ -3,6 +3,7 @@ import {createStitches} from '@stitches/react';
 const stitches = createStitches({
   theme: {
     radii: {
+      small: '4px',
       m: '8px',
       c: '999px',
     },
