@@ -32,9 +32,7 @@ const NotificationsSection = styled('div', {
 const NotificationsWrap = styled('div');
 
 export function Notifications() {
-  const [transform, setTransform] = useState(false);
-
-  const [notifications] = useState([
+  const [notifications, setNotifications] = useState([
     {
       name: 'Test1',
     },
@@ -53,19 +51,41 @@ export function Notifications() {
     {
       name: 'Test6',
     },
+    {
+      name: 'Test7',
+    },
+    {
+      name: 'Test8',
+    },
+    {
+      name: 'Test9',
+    },
+    {
+      name: 'Test10',
+    },
+    {
+      name: 'Test11',
+    },
+    {
+      name: 'Test12',
+    },
   ]);
 
-  useEffect(() => {
+/*  useEffect(() => {
     const interval = setInterval(() => {
-      setTransform(!transform);
+      const state = notifications;
+      state.unshift(state.pop());
+
+      setNotifications(state);
+      console.log(notifications);
     }, 2000);
 
     return () => clearInterval(interval);
-  });
+  }, [notifications]); */
 
   return (
     <NotificationsSection>
-      <NotificationsWrap css={{transform: `translateY(${transform ? '124px' : '0'})`}}>
+      <NotificationsWrap>
         {notifications.map((user, index) => (<Notification key={index} name={user.name} />))}
       </NotificationsWrap>
     </NotificationsSection>

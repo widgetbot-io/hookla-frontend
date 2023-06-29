@@ -28,6 +28,7 @@ export function HeroSection() {
       <Container>
         <Hero.Notifications />
         <Common.Text size='h1' as='h1' css={{maxWidth: '400px'}}>Keep your community informed</Common.Text>
+        <Hero.Notifications />
       </Container>
     </Section>
   );
