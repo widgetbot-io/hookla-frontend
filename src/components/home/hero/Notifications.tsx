@@ -1,7 +1,8 @@
 'use client'
 
-import {useState, useEffect} from 'react';
-import {styled, theme} from "stitches-config";
+import {useState} from 'react';
+import {styled, theme} from 'stitches-config';
+import { useInterval } from '@/hooks';
 import {Notification} from './Notification';
 
 const NotificationsSection = styled('div', {
@@ -71,17 +72,13 @@ export function Notifications() {
     },
   ]);
 
-/*  useEffect(() => {
-    const interval = setInterval(() => {
-      const state = notifications;
-      state.unshift(state.pop());
+  useInterval(() => {
+    setNotifications(state => {
+      const last = state[state.length - 1];
 
-      setNotifications(state);
-      console.log(notifications);
-    }, 2000);
-
-    return () => clearInterval(interval);
-  }, [notifications]); */
+      return [last, ...state.filter(x => x !== last)];
+    });
+  }, 2000);
 
   return (
     <NotificationsSection>
