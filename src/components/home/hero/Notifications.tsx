@@ -74,9 +74,12 @@ export function Notifications() {
 
   useInterval(() => {
     setNotifications(state => {
-      const last = state[state.length - 1];
+      if (!state.length) return [];
 
-      return [last, ...state.filter(x => x !== last)];
+      return [
+        state[state.length - 1], // The last element, now at the start
+        ...state.filter((_, idx) => state.length - 1 > idx) // Filters out all but the last element
+      ];
     });
   }, 2000);
 
