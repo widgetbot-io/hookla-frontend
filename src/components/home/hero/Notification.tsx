@@ -19,7 +19,7 @@ const NotificationUser = styled('div', {
   marginBottom: '8px',
 });
 
-const NotificationPicture = styled(Common.Box, {
+const NotificationPicture = styled('div', {
   height: '20px',
   width: '20px',
   padding: '0',

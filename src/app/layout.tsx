@@ -1,6 +1,5 @@
 import {StyleSheet} from '@/stitches/StyleSheet';
 import {Inter} from 'next/font/google';
-import * as Common from "@/components/common";
 
 const inter = Inter({subsets: ['latin']});
 
@@ -20,7 +19,6 @@ export default function RootLayout({children}: Props) {
       <StyleSheet/>
     </head>
     <body className={inter.className}>
-      <Common.Navbar/>
       {children}
     </body>
     </html>

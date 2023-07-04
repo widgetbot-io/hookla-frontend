@@ -1,13 +1,12 @@
 import * as Common from '@/components/common';
-import * as Home from '@/components/home';
+import {theme} from 'stitches-config';
 
 export default function Index() {
   return (
-    <>
-      <Home.HeroSection />
-      <Common.Container>
-        <Home.ConfigureSection />
-      </Common.Container>
-    </>
+    <Common.Box>
+      <Common.BackdropBox css={{$$background: theme.colors.green300, $$foreground: theme.colors.green400}}>
+        Test
+      </Common.BackdropBox>
+    </Common.Box>
   )
 }

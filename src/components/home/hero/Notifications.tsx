@@ -78,7 +78,7 @@ export function Notifications() {
 
       return [
         state[state.length - 1], // The last element, now at the start
-        ...state.splice(0, -1) // Gets all but the last element
+        ...state.slice(0, -1) // Gets all but the last element
       ];
     });
   }, 2000);
