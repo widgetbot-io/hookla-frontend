@@ -14,7 +14,7 @@ export function useInterval(callback: () => any, delay: number) {
       delay
     );
 
-    return () => clearInterval(intervalRef.current as number);
+    return () => clearInterval(intervalRef.current as unknown as number);
   });
 
   return intervalRef;
