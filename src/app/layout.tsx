@@ -17,6 +17,7 @@ export default function RootLayout({children}: Props) {
   return (
     <html lang='en'>
     <head>
+      <title>{metadata.title}</title>
       <StyleSheet/>
     </head>
     <body className={inter.className}>
