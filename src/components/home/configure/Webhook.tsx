@@ -2,7 +2,7 @@ import Image from "next/image";
 import {styled, theme} from "stitches-config";
 import * as Common from "@/components/common";
 
-const WebhookBox = styled('div', {
+const WebhookSection = styled('section', {
   position: 'relative',
   display: 'flex',
   justifyContent: 'center',
@@ -24,33 +24,27 @@ const WebhookBox = styled('div', {
   },
 });
 
-const WebhookArrow = styled(Common.Box, {
+const WebhookArrow = styled('div', {
   display: 'inline-flex',
   alignItems: 'center',
-  background: theme.colors.neutral100,
-  borderBottomLeftRadius: 0,
-  borderTopLeftRadius: 0,
-  border: '1px solid',
-  borderLeft: 'none',
-  borderColor: theme.colors.neutral900,
   paddingRight: '32px',
 });
 
 const WebhookURLInput = styled(Common.Input, {
   fontSize: theme.fontSizes.large,
   padding: '32px',
-  borderRight: 'none',
-  borderTopRightRadius: 0,
-  borderBottomRightRadius: 0,
+  border: 'none',
 });
 
 export function Webhook() {
   return (
-    <WebhookBox>
-      <WebhookURLInput placeholder='Webhook URL' />
-      <WebhookArrow>
-        <Image src='/arrow_l.svg' width={65} height={22} alt='Arrow' />
-      </WebhookArrow>
-    </WebhookBox>
+    <WebhookSection>
+      <Common.BackdropBox css={{$$background: theme.colors.neutral200, $$foreground: theme.colors.neutral100}} inline>
+        <WebhookURLInput placeholder='Webhook URL' />
+        <WebhookArrow>
+          <Image src='/arrow_l.svg' width={65} height={22} alt='Arrow' />
+        </WebhookArrow>
+      </Common.BackdropBox>
+    </WebhookSection>
   );
 }

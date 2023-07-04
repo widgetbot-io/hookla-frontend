@@ -6,6 +6,7 @@ import {Box} from './Box';
 type BackdropBoxProps = {
   children: ReactNode;
   css: CSS;
+  inline?: boolean;
 }
 
 const Background = styled(Box, {
@@ -18,12 +19,20 @@ const Background = styled(Box, {
 const Foreground = styled(Box, {
   background: '$$foreground',
   transform: 'translate(-4px, -4px)',
+
+  variants: {
+    inline: {
+      true: {
+        padding: 0,
+      },
+    },
+  },
 });
 
-export function BackdropBox({ children, css }: BackdropBoxProps) {
+export function BackdropBox({ children, css, inline }: BackdropBoxProps) {
   return (
     <Background css={css}>
-      <Foreground>
+      <Foreground inline={inline}>
         {children}
       </Foreground>
     </Background>

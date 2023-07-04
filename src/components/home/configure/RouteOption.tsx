@@ -4,17 +4,13 @@ import {useState} from 'react';
 import {styled, theme} from "stitches-config"
 import * as Common from "@/components/common";
 
-const RouteBox = styled('label', {
+const RouteLabel = styled('label', {
   display: 'flex',
   alignItems: 'center',
   width: '100%',
-  background: theme.colors.magenta400,
-  border: '1px solid',
-  borderColor: theme.colors.magenta900,
-  borderRadius: theme.radii.medium,
-  padding: '32px',
   cursor: 'pointer',
   userSelect: 'none',
+  padding: '32px',
 });
 
 const RouteCheckbox = styled(Common.Input, {
@@ -64,13 +60,15 @@ export function RouteOption() {
   }
 
   return (
-    <RouteBox>
-      <RouteIcon />
-      <RouteMeta>
-        <Common.Text css={{color: theme.colors.magenta900}}>Provider</Common.Text>
-        <Common.Text css={{color: theme.colors.magenta700}}>Provider Description</Common.Text>
-      </RouteMeta>
-      <RouteCheckbox type='checkbox' checked={isChecked} onChange={handleChange}/>
-    </RouteBox>
+    <Common.BackdropBox css={{$$background: theme.colors.magenta300, $$foreground: theme.colors.magenta400}} inline>
+      <RouteLabel>
+        <RouteIcon />
+        <RouteMeta>
+          <Common.Text css={{color: theme.colors.magenta900}}>Provider</Common.Text>
+          <Common.Text css={{color: theme.colors.magenta700}}>Provider Description</Common.Text>
+        </RouteMeta>
+        <RouteCheckbox type='checkbox' checked={isChecked} onChange={handleChange}/>
+      </RouteLabel>
+    </Common.BackdropBox>
   );
 }
