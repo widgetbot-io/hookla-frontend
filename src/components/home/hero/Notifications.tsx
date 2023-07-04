@@ -78,7 +78,7 @@ export function Notifications() {
 
       return [
         state[state.length - 1], // The last element, now at the start
-        ...state.filter((_, idx) => state.length - 1 > idx) // Filters out all but the last element
+        ...state.splice(0, -1) // Gets all but the last element
       ];
     });
   }, 2000);
