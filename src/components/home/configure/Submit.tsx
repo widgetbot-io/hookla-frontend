@@ -9,11 +9,14 @@ const SubmitContent = styled('div', {
 
 export function Submit() {
   return (
-    <Common.BackdropBox css={{$$background: theme.colors.green300, $$foreground: theme.colors.green400, marginTop: '64px'}}>
-      <SubmitContent>
-        <Common.Text size='h3' as='h3' css={{color: theme.colors.green800}}>Ready to go?</Common.Text>
-        <Common.Button type='primary' arrow>Proceed</Common.Button>
-      </SubmitContent>
-    </Common.BackdropBox>
+    <>
+      <Common.BackgroundSprite src='./waves.svg' css={{left: '-32px'}}/>
+      <Common.BackdropBox css={{$$background: theme.colors.green300, $$foreground: theme.colors.green400, marginTop: '64px'}}>
+        <SubmitContent>
+          <Common.Text size='h3' as='h3' css={{color: theme.colors.green800}}>Ready to go?</Common.Text>
+          <Common.Button type='primary' arrow>Proceed</Common.Button>
+        </SubmitContent>
+      </Common.BackdropBox>
+    </>
   )
 }
