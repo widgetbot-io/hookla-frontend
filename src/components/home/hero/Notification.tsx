@@ -41,7 +41,7 @@ export function Notification({name}: NotificationProps) {
   return (
     <Common.BackdropBox css={{
       position: 'relative',
-      $$background: theme.colors.green500,
+      $$background: theme.colors.green300,
       $$foreground: theme.colors.green400,
       textAlign: 'left',
       fontSize: theme.fontSizes.small,

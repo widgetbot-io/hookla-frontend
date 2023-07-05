@@ -5,6 +5,8 @@ import Image from 'next/image'
 type BackgroundSpriteProps = {
   src: string;
   css: CSS;
+  width: number;
+  height: number;
 }
 
 const Sprite = styled('div', {
@@ -12,10 +14,10 @@ const Sprite = styled('div', {
   zIndex: '-1',
 })
 
-export function BackgroundSprite({src, css}: BackgroundSpriteProps) {
+export function BackgroundSprite({src, css, width, height}: BackgroundSpriteProps) {
   return (
     <Sprite css={css}>
-      <Image src={src} alt='sprite' width={347} height={230} />
+      <Image src={src} alt='sprite' width={width} height={height} />
     </Sprite>
   )
 }

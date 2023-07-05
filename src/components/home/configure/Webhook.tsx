@@ -42,7 +42,7 @@ export function Webhook() {
       <Common.BackdropBox css={{$$background: theme.colors.neutral200, $$foreground: theme.colors.neutral100}} inline>
         <WebhookURLInput placeholder='Webhook URL' />
         <WebhookArrow>
-          <Image src='/arrow_l.svg' width={65} height={22} alt='Arrow' />
+          <Image src='/arrow_large.svg' width={65} height={22} alt='Arrow' />
         </WebhookArrow>
       </Common.BackdropBox>
     </WebhookSection>
