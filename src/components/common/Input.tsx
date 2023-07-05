@@ -22,8 +22,16 @@ export const Input = styled('input', {
     maxWidth: '156px',
     width: '100%',
 
-    '&:focus': {
-      maxWidth: '312px',
+    '@media (min-width: 600px)': {
+      '&:focus': {
+        maxWidth: '312px',
+      },
+    },
+
+    '@media (max-width: 450px)': {
+      maxWidth: 'unset',
+      width: '100%',
+      marginLeft: 0,
     },
   },
 

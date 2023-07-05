@@ -14,6 +14,19 @@ const Nav = styled('nav', {
   borderBottom: '1px solid',
   borderColor: theme.colors.neutral400,
   zIndex: 10,
+
+  '@media (max-width: 450px)': {
+    paddingBottom: '16px',
+  },
+});
+
+const NavContent = styled(Container, {
+  display: 'flex',
+  alignItems: 'center',
+
+  '@media (max-width: 450px)': {
+    flexWrap: 'wrap',
+  },
 });
 
 const Brand = styled('div', {
@@ -29,18 +42,58 @@ const Brand = styled('div', {
     marginRight: '16px',
     background: 'url(/logo.svg)',
   },
+
+  '@media (max-width: 800px)': {
+    '& > div': {
+      display: 'none',
+    }
+  },
 });
 
 const Bar = styled('div', {
   flexGrow: '1',
   display: 'flex',
   justifyContent: 'flex-end',
+
+  '@media (max-width: 450px)': {
+    flexWrap: 'wrap',
+    marginTop: '-42px',
+  },
+});
+
+const LoginButton = styled(Button, {
+  position: 'relative',
+  marginLeft: '16px',
+  overflow: 'hidden',
+
+  '&::before': {
+    content: '',
+    position: 'absolute',
+    display: 'block',
+    top: '-8px',
+    left: '0',
+    height: '64px',
+    width: '64px',
+    background: 'url(/discord.svg) no-repeat center center',
+    backgroundSize: 'contain',
+    transform: 'rotate(30deg)',
+    opacity: 0.2,
+  },
+
+  '@media (max-width: 450px)': {
+    order: -1,
+    marginBottom: '16px',
+  },
+
+  '& > span': {
+    color: '#5865F2',
+  },
 })
 
 export function Navbar() {
   return (
     <Nav>
-      <Container css={{display: 'flex', alignItems: 'center'}}>
+      <NavContent>
         <Brand>
           <div>
             <Text>Hookla</Text>
@@ -49,10 +102,9 @@ export function Navbar() {
         </Brand>
         <Bar>
           <Input placeholder='Search documentation' type='search' />
-          <Button type='secondary'>Login</Button>
-          <Button css={{marginLeft: '16px'}} type='primary'>Sign Up</Button>
+          <LoginButton type='primary'>Login with <span>Discord</span></LoginButton>
         </Bar>
-      </Container>
+      </NavContent>
     </Nav>
   );
 }
