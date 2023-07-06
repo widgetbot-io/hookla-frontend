@@ -1,6 +1,6 @@
 'use client'
 
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import {styled, theme} from 'stitches-config';
 import { useInterval } from '@/hooks';
 import {Notification} from './Notification';
@@ -71,6 +71,7 @@ export function Notifications() {
       name: 'Test12',
     },
   ]);
+  const [translate, setTranslate] = useState(0);
 
   useInterval(() => {
     setNotifications(state => {
@@ -81,11 +82,20 @@ export function Notifications() {
         ...state.slice(0, -1) // Gets all but the last element
       ];
     });
+
+    setTranslate(-133);
   }, 2000);
+
+  useEffect(() => {
+    setTranslate(0);
+  }, [translate]);
 
   return (
     <NotificationsSection>
-      <NotificationsWrap>
+      <NotificationsWrap css={{
+        transform: `translateY(${translate}px)`,
+        transition: translate === 0 ? '.2s ease transform' : 'none',
+      }}>
         {notifications.map((user, index) => (<Notification key={index} name={user.name} />))}
       </NotificationsWrap>
     </NotificationsSection>
