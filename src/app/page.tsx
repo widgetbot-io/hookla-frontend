@@ -5,9 +5,7 @@ export default function Index() {
   return (
     <>
       <Home.HeroSection />
-      <Common.Container>
-        <Home.ConfigureSection />
-      </Common.Container>
+      <Home.ConfigureSection />
     </>
   )
 }

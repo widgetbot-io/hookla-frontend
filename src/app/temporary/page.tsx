@@ -1,7 +1,9 @@
+import * as Home from '@/components/home';
+
 export default function Index() {
   return (
     <>
-      Test
+      <Home.ConfigureSection />
     </>
   )
 }

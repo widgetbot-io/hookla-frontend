@@ -5,8 +5,8 @@ globalCss(...[
   ...normalize,
   {
     'body': {
-      'margin': 0,
-      'background': theme.colors.neutral100,
+      margin: 0,
+      background: theme.colors.neutral100,
     },
     '*, *::before, *::after' : {
       boxSizing: 'border-box',
