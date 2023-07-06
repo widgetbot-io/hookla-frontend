@@ -13,10 +13,22 @@ const RouteContainer = styled(Common.Container, {
   display: 'flex',
   marginTop: '32px',
   alignItems: 'center',
+
+  '@media (max-width: 960px)': {
+    flexDirection: 'column',
+    marginTop: 0,
+  },
 });
 
 const RouteGroup = styled('div', {
   flexGrow: 1,
+
+  '@media (max-width: 960px)': {
+    width: '100%',
+    padding: '0 !important',
+    textAlign: 'left !important',
+    marginTop: '64px',
+  },
 });
 
 const RouteScroll = styled('div', {
@@ -30,13 +42,19 @@ const RouteScroll = styled('div', {
   }
 });
 
+const RouteArrow = styled('div', {
+  '@media (max-width: 1200px)': {
+    display: 'none',
+  },
+});
+
 export function Route() {
   return (
     <RouteSection>
       <RouteContainer>
         <Common.BackgroundSprite src='./star.svg' width={256} height={256} css={{left: '-156px', top: '64px'}}/>
         <Common.BackgroundSprite src='./lines.svg' width={288} height={288} css={{right: '-172px', bottom: '32px'}}/>
-        <RouteGroup css={{paddingRight: '32px'}}>
+        <RouteGroup css={{paddingRight: '16px'}}>
           <Common.Text size='h2' as='h2' css={{color: theme.colors.neutral900}}>Select your providers.</Common.Text>
           <Common.Text size='p' css={{color: theme.colors.neutral700, marginTop: '16px'}}>Description of what a provider is.</Common.Text>
           <RouteScroll>
@@ -46,8 +64,11 @@ export function Route() {
             <RouteOption />
           </RouteScroll>
         </RouteGroup>
-        <Image src='/arrow_xlarge.svg' width={124} height={22} alt='Arrow' />
-        <RouteGroup css={{paddingLeft: '32px', textAlign: 'right'}}>
+        <RouteArrow><Image src='/arrow_xlarge.svg' width={124} height={22} alt='Arrow' /></RouteArrow>
+        <RouteGroup css={{
+          paddingLeft: '16px',
+          textAlign: 'right',
+        }}>
           <Common.Text size='h2' as='h2' css={{color: theme.colors.neutral900}}>Select your destinations.</Common.Text>
           <Common.Text size='p' css={{color: theme.colors.neutral700, marginTop: '16px'}}>Description of what a destination is.</Common.Text>
           <RouteScroll>
