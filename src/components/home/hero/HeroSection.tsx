@@ -8,7 +8,6 @@ const Section = styled(Common.Section, {
   backgroundColor: theme.colors.green500,
   backgroundImage: 'url(./graph.svg)',
   backgroundPosition: 'center center',
-  paddingTop: '99px',
   minHeight: 'unset',
   maxHeight: '100vh',
   overflow: 'hidden',
@@ -30,6 +29,7 @@ const Middle = styled('div', {
   alignItems: 'center',
   height: '100%',
   padding: '64px 0',
+  marginTop: '99px',
 
   '&::before': {
     content: '',
