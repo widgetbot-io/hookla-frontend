@@ -7,8 +7,9 @@ import {Notification} from './Notification';
 
 const NotificationsSection = styled('div', {
   position: 'relative',
-  height: '100%',
   width: '100%',
+  height: '100%',
+  minHeight: '800px',
   maxWidth: '384px',
 
   '&::before': {
@@ -27,10 +28,21 @@ const NotificationsSection = styled('div', {
 
   '&:last-of-type::before': {
     right: '0',
-  }
+  },
+
+  '@media (max-width: 1200px)': {
+    '&:last-of-type': {
+      display: 'none',
+    },
+  },
 });
 
-const NotificationsWrap = styled('div');
+const NotificationsWrap = styled('div', {
+  position: 'absolute',
+  top: 0,
+  height: '100%',
+  width: '100%',
+});
 
 export function Notifications() {
   const [notifications, setNotifications] = useState([
@@ -57,18 +69,6 @@ export function Notifications() {
     },
     {
       name: 'Test8',
-    },
-    {
-      name: 'Test9',
-    },
-    {
-      name: 'Test10',
-    },
-    {
-      name: 'Test11',
-    },
-    {
-      name: 'Test12',
     },
   ]);
   const [translate, setTranslate] = useState(0);

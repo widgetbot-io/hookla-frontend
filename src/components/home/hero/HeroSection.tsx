@@ -8,8 +8,6 @@ const Section = styled(Common.Section, {
   backgroundColor: theme.colors.green500,
   backgroundImage: 'url(./graph.svg)',
   backgroundPosition: 'center center',
-  minHeight: 'unset',
-  maxHeight: '100vh',
   overflow: 'hidden',
 });
 
@@ -27,9 +25,9 @@ const Middle = styled('div', {
   flexDirection: 'column',
   justifyContent: 'space-between',
   alignItems: 'center',
-  height: '100%',
-  padding: '64px 0',
+  padding: '96px 0',
   marginTop: '99px',
+  height: '100%',
 
   '&::before': {
     content: '',
