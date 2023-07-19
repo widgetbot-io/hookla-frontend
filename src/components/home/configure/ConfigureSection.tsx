@@ -2,9 +2,7 @@ import {styled} from 'stitches-config';
 import * as Common from '@/components/common';
 import * as Configure from './index';
 
-const Section = styled(Common.Section, {
-  minHeight: 'calc(100vh - 99px - 32px)',
-});
+const Section = styled(Common.Section);
 
 export function ConfigureSection() {
   return (

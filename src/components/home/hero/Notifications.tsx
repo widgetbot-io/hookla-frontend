@@ -19,20 +19,40 @@ const NotificationsSection = styled('div', {
     width: '50%',
     height: '100%',
     top: '0',
-    background: theme.colors.green500,
+    background: theme.colors.green400,
   },
 
   '&:first-of-type::before': {
-    left: '0',
-  },
-
-  '&:last-of-type::before': {
     right: '0',
   },
 
+  '&:last-of-type::before': {
+    left: '0',
+  },
+
   '@media (max-width: 1200px)': {
+    maxWidth: 'unset',
+    flexGrow: 1,
+
     '&:last-of-type': {
       display: 'none',
+    },
+  },
+
+  '@media (max-width: 900px)': {
+    minHeight: '528px',
+
+    '&::before': {
+      position: 'absolute',
+      display: 'block',
+      bottom: '0',
+      top: 'unset',
+      right: 'unset',
+      left: '50%',
+      width: '100vw',
+      height: '192px',
+      transform: 'translateX(-50%)',
+      background: theme.colors.green400,
     },
   },
 });
@@ -42,6 +62,10 @@ const NotificationsWrap = styled('div', {
   top: 0,
   height: '100%',
   width: '100%',
+
+  '@media (max-width: 900px)': {
+    overflowY: 'hidden',
+  },
 });
 
 export function Notifications() {
