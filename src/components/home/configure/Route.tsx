@@ -36,6 +36,12 @@ const RouteScroll = styled('div', {
   overflow: 'auto',
   marginTop: '32px',
   textAlign: 'left',
+  msOverflowStyle: 'none',
+  scrollbarWidth: 'none',
+
+  '&::-webkit-scrollbar': {
+    display: 'none',
+  },
 
   '& > *:not(:first-child)': {
     marginTop: '8px',
