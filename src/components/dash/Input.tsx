@@ -24,6 +24,7 @@ const InputField = styled('input', {
   borderBottomRightRadius: theme.radii.medium,
   width: '100%',
   fontSize: theme.fontSizes.small,
+  fontFamily: 'inherit',
   outline: 'none !important',
 });
 
