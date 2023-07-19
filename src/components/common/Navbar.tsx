@@ -4,7 +4,7 @@ import {Button} from './Button';
 import {Input} from './Input';
 import {Text} from './Text';
 
-const Nav = styled('nav', {
+const BarWrap = styled('nav', {
   position: 'fixed',
   width: '100vw',
   background: theme.colors.neutral100,
@@ -20,7 +20,7 @@ const Nav = styled('nav', {
   },
 });
 
-const NavContent = styled(Container, {
+const Bar = styled(Container, {
   display: 'flex',
   alignItems: 'center',
 
@@ -50,7 +50,7 @@ const Brand = styled('div', {
   },
 });
 
-const Bar = styled('div', {
+const Action = styled('div', {
   flexGrow: '1',
   display: 'flex',
   justifyContent: 'flex-end',
@@ -92,19 +92,19 @@ const LoginButton = styled(Button, {
 
 export function Navbar() {
   return (
-    <Nav>
-      <NavContent>
+    <BarWrap>
+      <Bar>
         <Brand>
           <div>
             <Text>Hookla</Text>
             <Text css={{color: theme.colors.magenta400}}>Keep your community informed.</Text>
           </div>
         </Brand>
-        <Bar>
+        <Action>
           <Input placeholder='Search documentation' type='search' />
           <LoginButton type='primary'>Login with <span>Discord</span></LoginButton>
-        </Bar>
-      </NavContent>
-    </Nav>
+        </Action>
+      </Bar>
+    </BarWrap>
   );
 }

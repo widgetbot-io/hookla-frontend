@@ -11,7 +11,13 @@ export const Button = styled('button', {
         backgroundColor: theme.colors.neutral100,
         color: theme.colors.neutral900,
       },
+      neutral: {
+        backgroundColor: theme.colors.neutral200,
+        borderColor: theme.colors.neutral300,
+        color: theme.colors.neutral900,
+      },
     },
+
     arrow: {
       true: {
         display: 'flex',
@@ -27,6 +33,18 @@ export const Button = styled('button', {
         }
       },
     },
+
+    align: {
+      left: {
+        textAlign: 'left',
+      },
+      right: {
+        textAlign: 'right',
+      },
+      center: {
+        textAlign: 'center',
+      },
+    },
   },
 
   fontSize: theme.fontSizes.xsmall,
@@ -35,4 +53,5 @@ export const Button = styled('button', {
   border: '1px solid',
   borderColor: theme.colors.neutral900,
   borderRadius: theme.radii.medium,
+  cursor: 'pointer',
 });
