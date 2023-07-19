@@ -64,10 +64,22 @@ export function RouteList() {
           <Common.Text size='h2' as='h2' css={{color: theme.colors.neutral900}}>Select your providers.</Common.Text>
           <Common.Text size='p' css={{color: theme.colors.neutral700, marginTop: '16px'}}>Description of what a provider is.</Common.Text>
           <RouteScroll>
-            <Route />
-            <Route />
-            <Route />
-            <Route />
+            <Route>
+              <Common.Text>Provider</Common.Text>
+              <Common.Text>Provider Description</Common.Text>
+            </Route>
+            <Route>
+              <Common.Text>Provider</Common.Text>
+              <Common.Text>Provider Description</Common.Text>
+            </Route>
+            <Route>
+              <Common.Text>Provider</Common.Text>
+              <Common.Text>Provider Description</Common.Text>
+            </Route>
+            <Route>
+              <Common.Text>Provider</Common.Text>
+              <Common.Text>Provider Description</Common.Text>
+            </Route>
           </RouteScroll>
         </RouteGroup>
         <RouteArrow><Image src='/arrow_xlarge.svg' width={124} height={22} alt='Arrow' /></RouteArrow>
@@ -78,10 +90,22 @@ export function RouteList() {
           <Common.Text size='h2' as='h2' css={{color: theme.colors.neutral900}}>Select your destinations.</Common.Text>
           <Common.Text size='p' css={{color: theme.colors.neutral700, marginTop: '16px'}}>Description of what a destination is.</Common.Text>
           <RouteScroll>
-            <Route />
-            <Route />
-            <Route />
-            <Route />
+            <Route>
+              <Common.Text>Destination</Common.Text>
+              <Common.Text>Destination Description</Common.Text>
+            </Route>
+            <Route>
+              <Common.Text>Destination</Common.Text>
+              <Common.Text>Destination Description</Common.Text>
+            </Route>
+            <Route>
+              <Common.Text>Destination</Common.Text>
+              <Common.Text>Destination Description</Common.Text>
+            </Route>
+            <Route>
+              <Common.Text>Destination</Common.Text>
+              <Common.Text>Destination Description</Common.Text>
+            </Route>
           </RouteScroll>
         </RouteGroup>
       </RouteContainer>

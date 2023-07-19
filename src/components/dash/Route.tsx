@@ -1,12 +1,21 @@
 'use client'
 
 import {ReactNode, useState} from 'react';
-import {styled, theme} from "stitches-config"
-import * as Common from "@/components/common";
+import {styled, theme} from 'stitches-config';
+import * as Common from '@/components/common';
+import {CSS} from "@stitches/react";
 
 type RouteProps = {
   children: ReactNode;
+  css?: CSS;
 }
+
+const RouteBox = styled(Common.Box, {
+  background: theme.colors.neutral200,
+  borderColor: `${theme.colors.neutral300} !important`,
+  padding: '0 !important',
+  marginBottom: '8px',
+});
 
 const RouteLabel = styled('label', {
   display: 'flex',
@@ -14,17 +23,17 @@ const RouteLabel = styled('label', {
   width: '100%',
   cursor: 'pointer',
   userSelect: 'none',
-  padding: '32px',
+  padding: '24px',
 });
 
 const RouteCheckbox = styled(Common.Input, {
   appearance: 'none',
   webkitAppearance: 'none',
-  padding: '0',
-  background: theme.colors.magenta400,
+  padding: '0 !important',
+  background: `${theme.colors.neutral200} !important`,
   border: '1px solid',
   borderRadius: theme.radii.circle,
-  borderColor: theme.colors.magenta900,
+  borderColor: theme.colors.neutral900,
 
   '&::before': {
     content: '',
@@ -46,25 +55,25 @@ const RouteMeta = styled('div', {
   flexGrow: 1,
 
   '& > p:first-child': {
-    color: theme.colors.magenta900,
+    color: theme.colors.neutral900,
   },
 
   '& > p:nth-child(2)': {
-    color: theme.colors.magenta700,
+    color: theme.colors.neutral700,
   },
 });
 
 const RouteIcon = styled('div', {
-  height: '64px',
-  width: '64px',
-  background: theme.colors.magenta300,
+  height: '48px',
+  width: '48px',
+  background: theme.colors.neutral300,
   border: '1px solid',
-  borderColor: theme.colors.magenta900,
+  borderColor: theme.colors.neutral400,
   borderRadius: theme.radii.circle,
   marginRight: '16px',
 })
 
-export function Route({children}: RouteProps) {
+export function Route({children, css}: RouteProps) {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleChange = () => {
@@ -72,7 +81,7 @@ export function Route({children}: RouteProps) {
   }
 
   return (
-    <Common.BackdropBox css={{$$background: theme.colors.magenta300, $$foreground: theme.colors.magenta400}} inline>
+    <RouteBox css={css}>
       <RouteLabel>
         <RouteIcon />
         <RouteMeta>
@@ -80,6 +89,6 @@ export function Route({children}: RouteProps) {
         </RouteMeta>
         <RouteCheckbox type='checkbox' checked={isChecked} onChange={handleChange}/>
       </RouteLabel>
-    </Common.BackdropBox>
-  );
+    </RouteBox>
+  )
 }
