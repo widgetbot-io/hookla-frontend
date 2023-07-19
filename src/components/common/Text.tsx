@@ -3,6 +3,10 @@ import {styled, theme} from 'stitches-config';
 export const Text = styled('p', {
   variants: {
     size: {
+      sub: {
+        fontSize: theme.fontSizes.xsmall,
+      },
+
       p: {
         fontSize: theme.fontSizes.small,
       },
@@ -20,6 +24,11 @@ export const Text = styled('p', {
 
       h3: {
         fontSize: theme.fontSizes.medium,
+        fontWeight: 400,
+      },
+
+      h4: {
+        fontSize: theme.fontSizes.msmall,
         fontWeight: 400,
       }
     },

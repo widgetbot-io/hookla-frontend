@@ -49,6 +49,7 @@ const stitches = createStitches({
     fontSizes: {
       xsmall: '14px',
       small: '16px',
+      msmall: '20px',
       medium: '24px',
       large: '32px',
       xlarge: '64px',
