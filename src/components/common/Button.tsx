@@ -1,13 +1,6 @@
 import {styled, theme} from 'stitches-config';
 
 export const Button = styled('button', {
-  padding: '16px 24px',
-  outline: 'none',
-  border: '1px solid',
-  borderColor: theme.colors.neutral900,
-  borderRadius: theme.radii.medium,
-  fontSize: theme.fontSizes.xsmall,
-
   variants: {
     type: {
       primary: {
@@ -35,4 +28,11 @@ export const Button = styled('button', {
       },
     },
   },
+
+  fontSize: theme.fontSizes.xsmall,
+  padding: '16px 24px',
+  outline: 'none',
+  border: '1px solid',
+  borderColor: theme.colors.neutral900,
+  borderRadius: theme.radii.medium,
 });

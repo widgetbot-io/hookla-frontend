@@ -1,7 +1,7 @@
 import {styled, theme} from "stitches-config";
 import Image from "next/image";
 import * as Common from "@/components/common";
-import {RouteOption} from "./RouteOption";
+import {Route} from "@/components/home/setup/Route";
 
 const RouteSection = styled('section', {
   position: 'relative',
@@ -54,7 +54,7 @@ const RouteArrow = styled('div', {
   },
 });
 
-export function Route() {
+export function RouteList() {
   return (
     <RouteSection>
       <RouteContainer>
@@ -64,10 +64,10 @@ export function Route() {
           <Common.Text size='h2' as='h2' css={{color: theme.colors.neutral900}}>Select your providers.</Common.Text>
           <Common.Text size='p' css={{color: theme.colors.neutral700, marginTop: '16px'}}>Description of what a provider is.</Common.Text>
           <RouteScroll>
-            <RouteOption />
-            <RouteOption />
-            <RouteOption />
-            <RouteOption />
+            <Route />
+            <Route />
+            <Route />
+            <Route />
           </RouteScroll>
         </RouteGroup>
         <RouteArrow><Image src='/arrow_xlarge.svg' width={124} height={22} alt='Arrow' /></RouteArrow>
@@ -78,10 +78,10 @@ export function Route() {
           <Common.Text size='h2' as='h2' css={{color: theme.colors.neutral900}}>Select your destinations.</Common.Text>
           <Common.Text size='p' css={{color: theme.colors.neutral700, marginTop: '16px'}}>Description of what a destination is.</Common.Text>
           <RouteScroll>
-            <RouteOption />
-            <RouteOption />
-            <RouteOption />
-            <RouteOption />
+            <Route />
+            <Route />
+            <Route />
+            <Route />
           </RouteScroll>
         </RouteGroup>
       </RouteContainer>

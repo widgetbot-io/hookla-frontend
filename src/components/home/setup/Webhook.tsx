@@ -1,5 +1,5 @@
-import Image from "next/image";
 import {styled, theme} from "stitches-config";
+import Image from "next/image";
 import * as Common from "@/components/common";
 
 const WebhookSection = styled('section', {

@@ -1,9 +1,9 @@
 'use client'
 
 import {useState, useEffect} from 'react';
+import {useInterval} from '@/hooks';
 import {styled, theme} from 'stitches-config';
-import { useInterval } from '@/hooks';
-import {Notification} from './Notification';
+import {Notification} from '@/components/home/header/Notification';
 
 const NotificationsSection = styled('div', {
   position: 'relative',
@@ -68,7 +68,7 @@ const NotificationsWrap = styled('div', {
   },
 });
 
-export function Notifications() {
+export function NotificationList() {
   const [notifications, setNotifications] = useState([
     {
       name: 'Test1',

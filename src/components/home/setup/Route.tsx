@@ -52,7 +52,7 @@ const RouteIcon = styled('div', {
   marginRight: '16px',
 })
 
-export function RouteOption() {
+export function Route() {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleChange = () => {

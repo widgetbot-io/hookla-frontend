@@ -1,14 +1,14 @@
 import {styled, theme} from 'stitches-config';
 import Image from "next/image";
 import * as Common from '@/components/common';
-import * as Hero from './index';
+import * as Header from '@/components/home/header';
 
 const Section = styled(Common.Section, {
   display: 'flex',
+  overflow: 'hidden',
   backgroundColor: theme.colors.green500,
   backgroundImage: 'url(./graph.svg)',
   backgroundPosition: 'center center',
-  overflow: 'hidden',
 });
 
 const Container = styled(Common.Container, {
@@ -75,16 +75,16 @@ const Middle = styled('div', {
   },
 });
 
-export function HeroSection() {
+export function Hero() {
   return (
     <Section>
       <Container>
-        <Hero.Notifications />
-        <Middle>
-          <Common.Text size='h1' as='h1'>Keep your community informed</Common.Text>
-          <Image src='/arrow_down.svg' width={23} height={65} alt='arrow' />
-        </Middle>
-        <Hero.Notifications />
+        <Header.NotificationList />
+          <Middle>
+            <Common.Text size='h1' as='h1'>Keep your community informed</Common.Text>
+            <Image src='/arrow_down.svg' width={23} height={65} alt='arrow' />
+          </Middle>
+        <Header.NotificationList />
       </Container>
     </Section>
   );

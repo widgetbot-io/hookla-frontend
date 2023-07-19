@@ -1,15 +1,15 @@
 import {styled} from 'stitches-config';
 import * as Common from '@/components/common';
-import * as Configure from './index';
+import * as Setup from '@/components/home/setup';
 
 const Section = styled(Common.Section);
 
-export function ConfigureSection() {
+export function Config() {
   return (
     <Section>
-      <Configure.Webhook />
-      <Configure.Route />
-      <Configure.Submit />
+      <Setup.Webhook />
+      <Setup.RouteList />
+      <Setup.Submit />
     </Section>
   )
 }

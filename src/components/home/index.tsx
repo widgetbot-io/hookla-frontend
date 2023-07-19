@@ -1,2 +1,2 @@
-export * from './hero/HeroSection';
-export * from './configure/ConfigureSection';
+export * from '@/components/home/header/Hero';
+export * from '@/components/home/setup/Config';

@@ -1,8 +1,6 @@
 import {styled, theme} from 'stitches-config';
 
 export const Text = styled('p', {
-  margin: 0,
-
   variants: {
     size: {
       p: {
@@ -26,4 +24,6 @@ export const Text = styled('p', {
       }
     },
   },
+
+  margin: 0,
 });

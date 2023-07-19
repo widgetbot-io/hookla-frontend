@@ -17,9 +17,6 @@ const Background = styled(Box, {
 });
 
 const Foreground = styled(Box, {
-  background: '$$foreground',
-  transform: 'translate(-4px, -4px)',
-
   variants: {
     inline: {
       true: {
@@ -27,6 +24,9 @@ const Foreground = styled(Box, {
       },
     },
   },
+
+  background: '$$foreground',
+  transform: 'translate(-4px, -4px)',
 });
 
 export function BackdropBox({ children, css, inline }: BackdropBoxProps) {
