@@ -12,6 +12,7 @@ type InputProps = {
 }
 
 const InputGroup = styled('div', {
+  position: 'relative',
   display: 'flex',
   flexDirection: 'column',
   width: '100%',
@@ -49,6 +50,22 @@ const InputCount = styled('span', {
   marginLeft: '4px',
 })
 
+const InputValid = styled('span', {
+  position: 'absolute',
+  display: 'block',
+  width: '16px',
+  height: '16px',
+  border: '1px solid',
+  borderColor: theme.colors.green500,
+  backgroundColor: theme.colors.green400,
+  borderRadius: theme.radii.circle,
+  right: '16px',
+  top: '16px',
+  backgroundImage: 'url(/valid_check.svg)',
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'center center',
+});
+
 export function Input({label, type, placeholder, css}: InputProps) {
   const [count, setCount] = useState(0);
 
@@ -64,6 +81,7 @@ export function Input({label, type, placeholder, css}: InputProps) {
         placeholder={placeholder}
         onChange={e => setCount(e.target.value.length)}
       />
+      <InputValid />
     </InputGroup>
   )
 }
