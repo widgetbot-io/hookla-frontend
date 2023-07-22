@@ -1,4 +1,7 @@
+'use client'
+
 import type {CSS} from '@stitches/react';
+import {useState} from 'react';
 import {styled, theme} from 'stitches-config';
 
 type InputProps = {
@@ -47,13 +50,20 @@ const InputCount = styled('span', {
 })
 
 export function Input({label, type, placeholder, css}: InputProps) {
+  const [count, setCount] = useState(0);
+
   return (
     <InputGroup css={css}>
       <InputLabel>
         {label}
-        <InputCount>(0/32)</InputCount>
+        <InputCount>({count}/32)</InputCount>
       </InputLabel>
-      <InputField  {...(type === 'textarea' ? {as: 'textarea'} : {})} type={type} placeholder={placeholder} />
+      <InputField
+        {...(type === 'textarea' ? {as: 'textarea'} : {})}
+        type={type}
+        placeholder={placeholder}
+        onChange={e => setCount(e.target.value.length)}
+      />
     </InputGroup>
   )
 }
