@@ -7,6 +7,7 @@ const BarWrap = styled(Box, {
   display: 'flex',
   flexDirection: 'column',
   borderColor: theme.colors.neutral300,
+  background: theme.colors.neutral100,
   width: '33.333%',
 });
 

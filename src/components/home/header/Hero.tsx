@@ -8,7 +8,6 @@ const Section = styled(Common.Section, {
   overflow: 'hidden',
   backgroundColor: theme.colors.green500,
   backgroundImage: 'url(./graph.svg)',
-  backgroundPosition: 'center center',
 });
 
 const Container = styled(Common.Container, {

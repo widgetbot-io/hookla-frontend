@@ -17,12 +17,28 @@ export const metadata = {
 const Content = styled(Common.Box, {
   width: 'calc(66.666% - 32px)',
   borderColor: theme.colors.neutral300,
+  background: theme.colors.neutral100,
 });
 
 const Dash = styled(Common.Container, {
+  position: 'relative',
   display: 'flex',
   justifyContent: 'space-between',
-  paddingTop: '99px',
+  paddingTop: 'calc(99px + 64px)',
+
+  '&::before': {
+    content: '',
+    position: 'absolute',
+    display: 'block',
+    width: '100vw',
+    height: '256px',
+    top: '0',
+    left: '50%',
+    transform: 'translateX(-50%)',
+    backgroundColor: theme.colors.green500,
+    backgroundImage: 'url(/graph.svg)',
+    zIndex: -1,
+  }
 });
 
 export default function RootLayout({children}: Props) {
