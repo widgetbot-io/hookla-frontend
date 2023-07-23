@@ -14,7 +14,7 @@ const SidebarLinkContent = styled('div', {
     active: {
       true: {
         '& > a::before': {
-          background: theme.colors.green400,
+          backgroundColor: theme.colors.green400,
           borderColor: theme.colors.green500,
           fill: theme.colors.green700,
         }
@@ -25,7 +25,7 @@ const SidebarLinkContent = styled('div', {
   padding: 0,
   border: '1px solid',
   borderColor: theme.colors.neutral300,
-  background: theme.colors.neutral200,
+  backgroundColor: theme.colors.neutral200,
   borderRadius: theme.radii.medium,
 
   '&:not(:first-child)': {
@@ -46,9 +46,22 @@ const SidebarLinkContent = styled('div', {
       width: '32px',
       border: '1px solid',
       borderColor: theme.colors.neutral400,
-      background: theme.colors.neutral300,
+      backgroundColor: theme.colors.neutral300,
       borderRadius: theme.radii.circle,
+      backgroundImage: '$$icon',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center center',
       marginRight: '8px',
+    },
+
+    '&::after': {
+      content: '',
+      display: 'block',
+      height: '12px',
+      width: '32px',
+      backgroundImage: 'url(/sidebar_arrow.svg)',
+      backgroundRepeat: 'no-repeat',
+      marginLeft: 'auto',
     }
   },
 });
@@ -57,7 +70,10 @@ export function SidebarLink({children, label}: SidebarLinkProps) {
   const active = usePathname().split('/').slice(-1).toString() === label;
 
   return (
-    <SidebarLinkContent active={active}>
+    <SidebarLinkContent
+      active={active}
+      css={{$$icon: `url(/${label}.svg)`}}
+    >
       {children}
     </SidebarLinkContent>
   )
