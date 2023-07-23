@@ -6,10 +6,6 @@ import * as Common from '@/components/common';
 
 const SidebarSelectWrap = styled('div');
 
-const SidebarSelectInput = styled('select', {
-
-});
-
 const SidebarSelectStyled = styled('div', {
   position: 'relative',
 });
@@ -25,26 +21,41 @@ const SidebarSelectList = styled(Common.Box, {
 
 });
 
-const SidebarSelectOption = styled('div');
+const SidebarSelectOption = styled('div', {
+  cursor: 'pointer',
+});
 
 export function SidebarSelect() {
+  const options = [
+    {
+      label: 'WidgetBot',
+      value: 'widgetbot',
+    },
+    {
+      label: 'Kindolin',
+      value: 'kindolin',
+    },
+    {
+      label: 'Prism',
+      value: 'prism',
+    }
+  ]
+
   const [display, setDisplay] = useState(false);
+  const [current, setCurrent] = useState(options[0].label);
 
   return (
     <SidebarSelectWrap>
-      <SidebarSelectInput>
-        <option value='widgetbot'>WidgetBot</option>
-        <option value='kindolin'>Kindolin</option>
-        <option value='prism'>Prism</option>
-      </SidebarSelectInput>
       <SidebarSelectStyled>
         <SidebarSelectButton align='left' onClick={() => setDisplay(!display)}>
-          WidgetBot
+          {current}
         </SidebarSelectButton>
         <SidebarSelectList css={{display: display ? 'block' : 'none'}}>
-          <SidebarSelectOption>WidgetBot</SidebarSelectOption>
-          <SidebarSelectOption>Kindolin</SidebarSelectOption>
-          <SidebarSelectOption>Prism</SidebarSelectOption>
+          {options.map((option, index) => (
+            <SidebarSelectOption key={index} onClick={e => setCurrent((e.target as Element).innerHTML)}>
+              {option.label}
+            </SidebarSelectOption>
+          ))}
         </SidebarSelectList>
       </SidebarSelectStyled>
     </SidebarSelectWrap>
