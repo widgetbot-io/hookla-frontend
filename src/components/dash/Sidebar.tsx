@@ -1,9 +1,10 @@
 import {styled, theme} from 'stitches-config';
 import Link from 'next/link';
-import {Box} from '@/components/common/Box';
+import * as Common from '@/components/common';
 import {SidebarLink} from '@/components/dash/SidebarLink';
+import {SidebarSelect} from '@/components/dash/SidebarSelect';
 
-const SidebarWrap = styled(Box, {
+const SidebarWrap = styled(Common.Box, {
   display: 'flex',
   flexDirection: 'column',
   borderColor: theme.colors.neutral300,
@@ -14,6 +15,12 @@ const SidebarWrap = styled(Box, {
 export function Sidebar() {
   return (
     <SidebarWrap>
+      <Common.Text size='sub' as='h6' css={{color: theme.colors.neutral600}}>Webhook.</Common.Text>
+      <SidebarSelect />
+      <Common.Text size='sub' as='h6' css={{
+        color: theme.colors.neutral600,
+        marginTop: '32px',
+      }}>Configure.</Common.Text>
       <SidebarLink label='providers'>
         <Link href='/dash/providers'>Providers</Link>
       </SidebarLink>

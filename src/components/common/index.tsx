@@ -1,7 +1,6 @@
 export * from './BackgroundSprite';
 export * from './BackdropBox';
 export * from './Container';
-export * from '../dash/Sidebar';
 export * from './Section';
 export * from './Navbar';
 export * from './Button';

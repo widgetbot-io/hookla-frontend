@@ -5,6 +5,7 @@ export const Text = styled('p', {
     size: {
       sub: {
         fontSize: theme.fontSizes.xsmall,
+        fontWeight: 400,
       },
 
       p: {

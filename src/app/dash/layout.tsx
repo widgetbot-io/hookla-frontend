@@ -1,6 +1,7 @@
 import {StyleSheet} from '@/stitches/StyleSheet';
 import {Inter} from 'next/font/google';
 import * as Common from "@/components/common";
+import * as Dash from "@/components/dash";
 import {styled, theme} from 'stitches-config';
 
 const inter = Inter({subsets: ['latin']});
@@ -20,7 +21,7 @@ const Content = styled(Common.Box, {
   background: theme.colors.neutral100,
 });
 
-const Dash = styled(Common.Container, {
+const Container = styled(Common.Container, {
   position: 'relative',
   display: 'flex',
   justifyContent: 'space-between',
@@ -50,12 +51,12 @@ export default function RootLayout({children}: Props) {
     </head>
     <body className={inter.className}>
     <Common.Navbar />
-    <Dash>
-      <Common.Sidebar />
+    <Container>
+      <Dash.Sidebar />
       <Content>
         {children}
       </Content>
-    </Dash>
+    </Container>
     </body>
     </html>
   );
