@@ -4,10 +4,12 @@ import {ReactNode, useState} from 'react';
 import {styled, theme} from 'stitches-config';
 import * as Common from '@/components/common';
 import {CSS} from "@stitches/react";
+import Link from 'next/link';
 
 type RouteProps = {
   children: ReactNode;
   css?: CSS;
+  configurable?: boolean;
 }
 
 const RouteBox = styled(Common.Box, {
@@ -71,9 +73,22 @@ const RouteIcon = styled('div', {
   borderColor: theme.colors.neutral400,
   borderRadius: theme.radii.circle,
   marginRight: '16px',
-})
+});
 
-export function Route({children, css}: RouteProps) {
+const RouteFooter = styled('div', {
+  padding: '8px 24px',
+  background: theme.colors.neutral100,
+  borderBottomLeftRadius: theme.radii.medium,
+  borderBottomRightRadius: theme.radii.medium,
+  textAlign: 'right',
+
+  '& > a': {
+    textDecoration: 'none',
+    color: theme.colors.neutral700,
+  }
+});
+
+export function Route({children, css, configurable}: RouteProps) {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleChange = () => {
@@ -89,6 +104,11 @@ export function Route({children, css}: RouteProps) {
         </RouteMeta>
         <RouteCheckbox type='checkbox' checked={isChecked} onChange={handleChange}/>
       </RouteLabel>
+      {isChecked && configurable &&
+        <RouteFooter>
+            <Link href='/'>Configure embed</Link>
+        </RouteFooter>
+      }
     </RouteBox>
   )
 }
