@@ -9,6 +9,7 @@ type InputProps = {
   type: string;
   placeholder: string;
   css?: CSS;
+  status?: string;
 }
 
 const InputGroup = styled('div', {
@@ -50,23 +51,35 @@ const InputCount = styled('span', {
   marginLeft: '4px',
 })
 
-const InputValid = styled('span', {
+const InputStatus = styled('span', {
+  variants: {
+    status: {
+      valid: {
+        borderColor: theme.colors.green500,
+        backgroundColor: theme.colors.green400,
+        backgroundImage: 'url(/valid_check.svg)',
+      },
+      invalid: {
+        borderColor: theme.colors.red500,
+        backgroundColor: theme.colors.red400,
+        backgroundImage: 'url(/invalid_cross.svg)',
+      },
+    }
+  },
+
   position: 'absolute',
   display: 'block',
   width: '16px',
   height: '16px',
   border: '1px solid',
-  borderColor: theme.colors.green500,
-  backgroundColor: theme.colors.green400,
   borderRadius: theme.radii.circle,
   right: '16px',
   top: '16px',
-  backgroundImage: 'url(/valid_check.svg)',
   backgroundRepeat: 'no-repeat',
   backgroundPosition: 'center center',
 });
 
-export function Input({label, type, placeholder, css}: InputProps) {
+export function Input({label, type, placeholder, status, css}: InputProps) {
   const [count, setCount] = useState(0);
 
   return (
@@ -81,7 +94,7 @@ export function Input({label, type, placeholder, css}: InputProps) {
         placeholder={placeholder}
         onChange={e => setCount(e.target.value.length)}
       />
-      <InputValid />
+      <InputStatus status={status} />
     </InputGroup>
   )
 }
