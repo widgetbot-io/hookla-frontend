@@ -18,13 +18,15 @@ export const Input = styled('input', {
     backgroundImage: 'url(/search.svg)',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: '16px center',
-    paddingLeft: '36px',
+    paddingLeft: '40px',
     maxWidth: '156px',
     width: '100%',
 
     '@media (min-width: 600px)': {
       '&:focus': {
-        maxWidth: '312px',
+        maxWidth: '512px !important',
+        borderBottomLeftRadius: 0,
+        borderBottomRightRadius: 0,
       },
     },
 
@@ -37,5 +39,15 @@ export const Input = styled('input', {
 
   '&[type=checkbox]': {
     cursor: 'pointer',
-  }
+  },
+
+  '&::-webkit-search-cancel-button' : {
+    appearance: 'none',
+    webkitAppearance: 'none',
+  },
+
+  '&::-webkit-search-decoration' : {
+    appearance: 'none',
+    webkitAppearance: 'none',
+  },
 });
