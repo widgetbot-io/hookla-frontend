@@ -6,3 +6,4 @@ export * from './Sidebar';
 export * from './SidebarLink';
 export * from './SidebarSelect';
 export * from './Embed';
+export * from './Checkbox';

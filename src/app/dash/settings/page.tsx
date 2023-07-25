@@ -10,8 +10,8 @@ export default function Page() {
         <Common.Text css={{color: theme.colors.neutral700}}>Configure generic settings for your webhook.</Common.Text>
       </Dash.Heading>
       <Dash.Section title='Meta.' desc='Information to identify your webhook.'>
-        <Dash.Input type='text' label='Name' placeholder='WidgetBot' status='valid'/>
-        <Dash.Input css={{marginTop: '32px'}} type='textarea' label='Description' placeholder='WidgetBot is cool.' status='invalid'/>
+        <Dash.Input type='text' label='Name' placeholder='WidgetBot' />
+        <Dash.Input css={{marginTop: '32px'}} type='textarea' label='Description' placeholder='WidgetBot is cool.' />
       </Dash.Section>
     </>
   )
