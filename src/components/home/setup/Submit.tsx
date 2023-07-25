@@ -18,7 +18,7 @@ const SubmitContent = styled('div', {
 
   '@media (max-width: 512px)': {
     flexDirection: 'column',
-    padding: '16px',
+    padding: '32px 16px',
 
     '& > h3': {
       marginBottom: '16px',
