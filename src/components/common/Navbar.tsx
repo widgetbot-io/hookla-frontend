@@ -1,4 +1,5 @@
 import {styled, theme} from 'stitches-config';
+import Link from 'next/link';
 import {SearchDocumentation} from "@/components/common/SearchDocumentation";
 import {Container} from '@/components/common/Container';
 import {Button} from '@/components/common/Button';
@@ -88,9 +89,36 @@ const LoginButton = styled(Button, {
   '& > span': {
     color: '#5865F2',
   },
-})
+});
+
+const User = styled('div', {
+  display: 'flex',
+  alignItems: 'center',
+  fontSize: theme.fontSizes.xsmall,
+
+  '&::before': {
+    content: '',
+    display: 'block',
+    width: '32px',
+    height: '32px',
+    backgroundImage: 'url(/pfp.jpg)',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center center',
+    backgroundRepeat: 'no-repeat',
+    borderRadius: theme.radii.circle,
+    marginRight: '8px',
+  },
+
+  '& a': {
+    display: 'block',
+    textDecoration: 'none',
+    color: theme.colors.red500,
+  }
+});
 
 export function Navbar() {
+  const authed = true;
+
   return (
     <BarWrap>
       <Bar>
@@ -102,7 +130,17 @@ export function Navbar() {
         </Brand>
         <Action>
           <SearchDocumentation />
-          <LoginButton type='primary'>Login with <span>Discord</span></LoginButton>
+
+          {authed ?
+            <User>
+              <div>
+                Welcome, havasu
+                <Link href='/'>Logout</Link>
+              </div>
+            </User>
+            :
+            <LoginButton type='primary'>Login with <span>Discord</span></LoginButton>
+          }
         </Action>
       </Bar>
     </BarWrap>
