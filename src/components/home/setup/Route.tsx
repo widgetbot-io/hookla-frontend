@@ -15,6 +15,10 @@ const RouteLabel = styled('label', {
   cursor: 'pointer',
   userSelect: 'none',
   padding: '32px',
+
+  '@media (max-width: 512px)': {
+    padding: '16px',
+  }
 });
 
 const RouteCheckbox = styled(Common.Input, {
@@ -62,6 +66,12 @@ const RouteIcon = styled('div', {
   borderColor: theme.colors.magenta900,
   borderRadius: theme.radii.circle,
   marginRight: '16px',
+
+  '@media (max-width: 512px)': {
+    width: '48px',
+    height: '48px',
+    marginRight: '8px',
+  }
 })
 
 export function Route({children}: RouteProps) {

@@ -14,6 +14,16 @@ const SubmitContent = styled('div', {
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
+  padding: '32px',
+
+  '@media (max-width: 512px)': {
+    flexDirection: 'column',
+    padding: '16px',
+
+    '& > h3': {
+      marginBottom: '16px',
+    }
+  }
 });
 
 export function Submit() {
@@ -23,9 +33,9 @@ export function Submit() {
         <Common.BackgroundSprite src='./waves.svg' width={347} height={230} css={{left: '-128px', top: '-32px'}}/>
         <Common.BackdropBox css={{
           $$background: theme.colors.green300,
-          $$foreground: `${theme.colors.green400} url(/submit_bg.svg) no-repeat right`,
-          margin: '64px 0 128px 0',
-        }}>
+          $$foreground: `${theme.colors.green400} no-repeat right`,
+          margin: '64px 0 32px 0',
+        }} inline>
           <SubmitContent>
             <Common.Text size='h3' as='h3' css={{color: theme.colors.green800}}>Ready to go?</Common.Text>
             <Common.Button type='primary' arrow>Proceed</Common.Button>

@@ -28,12 +28,20 @@ const WebhookArrow = styled('div', {
   display: 'inline-flex',
   alignItems: 'center',
   paddingRight: '32px',
+
+  '@media (max-width: 512px)': {
+    display: 'none',
+  }
 });
 
 const WebhookURLInput = styled(Common.Input, {
   fontSize: theme.fontSizes.large,
   padding: '32px',
   border: 'none',
+
+  '@media (max-width: 512px)': {
+    fontSize: theme.fontSizes.small,
+  }
 });
 
 export function Webhook() {
