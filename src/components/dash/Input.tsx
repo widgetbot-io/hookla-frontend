@@ -9,7 +9,6 @@ type InputProps = {
   type: string;
   placeholder: string;
   css?: CSS;
-  status?: string;
 }
 
 const InputGroup = styled('div', {
@@ -79,7 +78,7 @@ const InputStatus = styled('span', {
   backgroundPosition: 'center center',
 });
 
-export function Input({label, type, placeholder, status, css}: InputProps) {
+export function Input({label, type, placeholder, css}: InputProps) {
   const [count, setCount] = useState(0);
 
   return (
@@ -94,7 +93,7 @@ export function Input({label, type, placeholder, status, css}: InputProps) {
         placeholder={placeholder}
         onChange={e => setCount(e.target.value.length)}
       />
-      <InputStatus status={status} />
+      <InputStatus status='valid' />
     </InputGroup>
   )
 }

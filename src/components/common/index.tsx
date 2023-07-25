@@ -1,3 +1,4 @@
+export * from './SearchDocumentation';
 export * from './BackgroundSprite';
 export * from './BackdropBox';
 export * from './Container';
