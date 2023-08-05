@@ -3,7 +3,7 @@
 import {useState} from 'react';
 import {styled, theme} from "stitches-config";
 import Link from "next/link";
-import {Input} from "@/components/common/Input";
+import * as Form from '@/components/common/form';
 
 const SearchWrap = styled('div', {
   position: 'relative',
@@ -61,7 +61,7 @@ export function SearchDocumentation() {
               <Link href='/'>How to do x cool thing with Hookla</Link>
           </SearchResults>
       }
-      <Input placeholder='Search documentation' type='search' onFocus={() => setDisplay(true)} onBlur={() => setDisplay(false)} />
+      <Form.Search placeholder='Search documentation' type='search' onFocus={() => setDisplay(true)} onBlur={() => setDisplay(false)} />
     </SearchWrap>
   )
 }

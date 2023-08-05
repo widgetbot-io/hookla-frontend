@@ -3,7 +3,7 @@
 import {useState, useEffect} from 'react';
 import {useInterval} from '@/hooks';
 import {styled, theme} from 'stitches-config';
-import {Notification} from '@/components/home/header/Notification';
+import {Notification} from '@/components/home/Notification';
 
 const NotificationsSection = styled('div', {
   position: 'relative',

@@ -1,7 +1,6 @@
 import {styled, theme} from 'stitches-config';
 import Link from 'next/link';
-import {Input} from '@/components/dash/Input';
-import {Checkbox} from '@/components/dash/Checkbox';
+import * as Form from '@/components/dash/form';
 import * as Common from '@/components/common';
 
 const EmbedBuilder = styled('section', {
@@ -77,11 +76,11 @@ export function Embed() {
   return (
     <>
       <EmbedBuilder>
-        <Input type='text' label='Title' placeholder='Embed title' />
-        <Input type='text' label='Description' placeholder='Embed description' />
-        <Input type='text' label='URL' placeholder='Embed URL' />
-        <Input type='text' label='Footer' placeholder='Embed Footer' />
-        <Checkbox label='Timestamp' />
+        <Form.Input type='text' label='Title' placeholder='Embed title' />
+        <Form.Input type='text' label='Description' placeholder='Embed description' />
+        <Form.Input type='text' label='URL' placeholder='Embed URL' />
+        <Form.Input type='text' label='Footer' placeholder='Embed Footer' />
+        <Form.Checkbox label='Timestamp' />
       </EmbedBuilder>
       <EmbedPreview>
         <Common.Text as='h3' size='h4' css={{marginTop: '32px'}}>Preview</Common.Text>

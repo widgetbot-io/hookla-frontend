@@ -3,6 +3,7 @@
 import type {CSS} from '@stitches/react';
 import {useState} from 'react';
 import {styled, theme} from 'stitches-config';
+import * as Form from '@/components/common/form';
 
 type InputProps = {
   label: string;
@@ -18,14 +19,14 @@ const InputGroup = styled('div', {
   width: '100%',
 });
 
-const InputField = styled('input', {
+const InputField = styled(Form.Input, {
   padding: '8px 16px 16px 16px',
   background: theme.colors.neutral200,
   border: '1px solid',
   borderTop: 'none',
   borderColor: theme.colors.neutral300,
-  borderBottomLeftRadius: theme.radii.medium,
-  borderBottomRightRadius: theme.radii.medium,
+  borderTopLeftRadius: 0,
+  borderTopRightRadius: 0,
   width: '100%',
   fontSize: theme.fontSizes.small,
   fontFamily: 'inherit',

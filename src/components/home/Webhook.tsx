@@ -1,8 +1,9 @@
 import {styled, theme} from "stitches-config";
 import Image from "next/image";
 import * as Common from "@/components/common";
+import * as Form from "@/components/common/form";
 
-const WebhookSection = styled('section', {
+const WebhookSection = styled(Common.Section, {
   position: 'relative',
   display: 'flex',
   justifyContent: 'center',
@@ -34,7 +35,7 @@ const WebhookArrow = styled('div', {
   }
 });
 
-const WebhookURLInput = styled(Common.Input, {
+const WebhookURLInput = styled(Form.Input, {
   fontSize: theme.fontSizes.large,
   padding: '32px',
   border: 'none',
@@ -47,12 +48,12 @@ const WebhookURLInput = styled(Common.Input, {
 export function Webhook() {
   return (
     <WebhookSection>
-      <Common.BackdropBox css={{$$background: theme.colors.neutral200, $$foreground: theme.colors.neutral100}} inline>
+      <Common.Box stacked css={{$$background: theme.colors.neutral200, $$foreground: theme.colors.neutral100}} inline>
         <WebhookURLInput placeholder='Webhook URL' />
         <WebhookArrow>
           <Image src='/arrow_large.svg' width={65} height={22} alt='Arrow' />
         </WebhookArrow>
-      </Common.BackdropBox>
+      </Common.Box>
     </WebhookSection>
   );
 }

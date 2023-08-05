@@ -39,7 +39,7 @@ const NotificationIcon = styled('div', {
 
 export function Notification({name}: NotificationProps) {
   return (
-    <Common.BackdropBox css={{
+    <Common.Box stacked css={{
       position: 'relative',
       $$background: theme.colors.green300,
       $$foreground: theme.colors.green400,
@@ -61,6 +61,6 @@ export function Notification({name}: NotificationProps) {
           <Common.Text size='p' as='p' css={{color: theme.colors.green600}}>widgetbot-io/Charts:master</Common.Text>
         </NotificationFooter>
       </NotificationWrap>
-    </Common.BackdropBox>
+    </Common.Box>
   )
 }

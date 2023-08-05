@@ -1,7 +1,7 @@
 import {styled, theme} from "stitches-config";
 import Image from "next/image";
 import * as Common from "@/components/common";
-import {Route} from "@/components/home/setup/Route";
+import {Route} from "@/components/home/Route";
 
 const RouteSection = styled('section', {
   position: 'relative',
@@ -58,8 +58,8 @@ export function RouteList() {
   return (
     <RouteSection>
       <RouteContainer>
-        <Common.BackgroundSprite src='./star.svg' width={256} height={256} css={{left: '-156px', top: '64px'}}/>
-        <Common.BackgroundSprite src='./lines.svg' width={288} height={288} css={{right: '-172px', bottom: '32px'}}/>
+        <Common.Sprite src='./star.svg' width={256} height={256} css={{left: '-156px', top: '64px'}}/>
+        <Common.Sprite src='./lines.svg' width={288} height={288} css={{right: '-172px', bottom: '32px'}}/>
         <RouteGroup css={{paddingRight: '16px'}}>
           <Common.Text size='h2' as='h2' css={{color: theme.colors.neutral900}}>Select your providers.</Common.Text>
           <Common.Text size='p' css={{color: theme.colors.neutral700, marginTop: '16px'}}>Description of what a provider is.</Common.Text>

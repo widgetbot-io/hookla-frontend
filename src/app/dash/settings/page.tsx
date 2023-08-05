@@ -1,6 +1,7 @@
 import {theme} from 'stitches-config';
 import * as Common from '@/components/common';
 import * as Dash from '@/components/dash';
+import * as Form from '@/components/dash/form';
 
 export default function Page() {
   return (
@@ -10,8 +11,8 @@ export default function Page() {
         <Common.Text css={{color: theme.colors.neutral700}}>Configure generic settings for your webhook.</Common.Text>
       </Dash.Heading>
       <Dash.Section title='Meta.' desc='Information to identify your webhook.'>
-        <Dash.Input type='text' label='Name' placeholder='WidgetBot' />
-        <Dash.Input css={{marginTop: '32px'}} type='textarea' label='Description' placeholder='WidgetBot is cool.' />
+        <Form.Input type='text' label='Name' placeholder='WidgetBot' />
+        <Form.Input css={{marginTop: '32px'}} type='textarea' label='Description' placeholder='WidgetBot is cool.' />
       </Dash.Section>
     </>
   )

@@ -2,22 +2,22 @@ import type {CSS} from '@stitches/react';
 import {styled} from "stitches-config";
 import Image from 'next/image'
 
-type BackgroundSpriteProps = {
+type SpriteProps = {
   src: string;
   css: CSS;
   width: number;
   height: number;
 }
 
-const Sprite = styled('div', {
+const Vector = styled('div', {
   position: 'absolute',
   zIndex: '-1',
 })
 
-export function BackgroundSprite({src, css, width, height}: BackgroundSpriteProps) {
+export function Sprite({src, css, width, height}: SpriteProps) {
   return (
-    <Sprite css={css}>
+    <Vector css={css}>
       <Image src={src} alt='sprite' width={width} height={height} />
-    </Sprite>
+    </Vector>
   )
 }
