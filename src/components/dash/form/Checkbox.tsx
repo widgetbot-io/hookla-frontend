@@ -35,7 +35,7 @@ export function Checkbox({label, css}: CheckboxProps) {
     <CheckboxLabel css={css}>
       <Common.Text css={{color: theme.colors.neutral700, fontSize: theme.fontSizes.xsmall, marginBottom: '8px !important'}}>{label}</Common.Text>
       <div>
-        <Form.Checkbox type='checkbox' checked={isChecked} onChange={() => setIsChecked(!isChecked)} />
+        <Form.Checkbox type='checkbox' checked={isChecked} onChange={() => setIsChecked(!isChecked)} css={{background: theme.colors.neutral200}} />
         <Common.Text css={{marginLeft: '4px !important', fontSize: theme.fontSizes.xsmall, color: theme.colors.neutral600}}>{isChecked ? 'Enabled' : 'Disabled'}</Common.Text>
       </div>
     </CheckboxLabel>

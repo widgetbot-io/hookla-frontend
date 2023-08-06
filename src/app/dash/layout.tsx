@@ -15,12 +15,6 @@ export const metadata = {
   description: 'Keep your community informed',
 };
 
-const Content = styled(Common.Box, {
-  width: 'calc(66.666% - 32px)',
-  borderColor: theme.colors.neutral300,
-  background: theme.colors.neutral100,
-});
-
 const Container = styled(Common.Container, {
   position: 'relative',
   display: 'flex',
@@ -53,9 +47,13 @@ export default function RootLayout({children}: Props) {
     <Common.Navbar />
     <Container>
       <Dash.Sidebar />
-      <Content>
+      <Common.Box css={{
+        width: 'calc(66.666% - 32px)',
+        borderColor: theme.colors.neutral300,
+        background: theme.colors.neutral100,
+      }}>
         {children}
-      </Content>
+      </Common.Box>
     </Container>
     </body>
     </html>

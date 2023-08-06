@@ -1,20 +1,18 @@
-import {styled, theme} from 'stitches-config';
+import {theme} from 'stitches-config';
 import Link from 'next/link';
 import * as Common from '@/components/common';
 import {SidebarLink} from '@/components/dash/SidebarLink';
 import {SidebarSelect} from '@/components/dash/SidebarSelect';
 
-const SidebarWrap = styled(Common.Box, {
-  display: 'flex',
-  flexDirection: 'column',
-  borderColor: theme.colors.neutral300,
-  background: theme.colors.neutral100,
-  width: '33.333%',
-});
-
 export function Sidebar() {
   return (
-    <SidebarWrap>
+    <Common.Box css={{
+      display: 'flex',
+      flexDirection: 'column',
+      borderColor: theme.colors.neutral300,
+      background: theme.colors.neutral100,
+      width: '33.333%',
+    }}>
       <Common.Text size='sub' as='h6' css={{color: theme.colors.neutral600}}>Webhook.</Common.Text>
       <SidebarSelect />
       <Common.Text size='sub' as='h6' css={{
@@ -33,6 +31,6 @@ export function Sidebar() {
       <SidebarLink label='settings'>
         <Link href='/dash/settings'>Settings</Link>
       </SidebarLink>
-    </SidebarWrap>
+    </Common.Box>
   )
 }

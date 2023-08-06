@@ -13,13 +13,6 @@ type RouteProps = {
   configurable?: boolean;
 }
 
-const RouteBox = styled(Common.Box, {
-  background: theme.colors.neutral200,
-  borderColor: `${theme.colors.neutral300} !important`,
-  padding: '0 !important',
-  marginBottom: '8px',
-});
-
 const RouteLabel = styled('label', {
   display: 'flex',
   alignItems: 'center',
@@ -72,19 +65,27 @@ export function Route({children, css, configurable}: RouteProps) {
   }
 
   return (
-    <RouteBox css={css}>
+    <Common.Box css={{
+      ...css,
+      background: theme.colors.neutral200,
+      borderColor: `${theme.colors.neutral300} !important`,
+      padding: '0 !important',
+      marginBottom: '8px',
+    }}>
       <RouteLabel>
         <RouteIcon />
         <RouteMeta>
           {children}
         </RouteMeta>
-        <Form.Checkbox type='checkbox' checked={isChecked} onChange={handleChange}/>
+        <Form.Checkbox type='checkbox' checked={isChecked} onChange={handleChange} css={{
+          background: theme.colors.neutral200,
+        }} />
       </RouteLabel>
       {isChecked && configurable &&
         <RouteFooter>
             <Link href='/'>Configure embed</Link>
         </RouteFooter>
       }
-    </RouteBox>
+    </Common.Box>
   )
 }

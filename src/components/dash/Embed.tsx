@@ -11,12 +11,6 @@ const EmbedBuilder = styled('section', {
 
 const EmbedPreview  = styled('section');
 
-const EmbedPreviewWrap = styled(Common.Box, {
-  borderStyle: 'dashed',
-  borderColor: theme.colors.neutral300,
-  marginTop: '8px',
-});
-
 const EmbedPreviewBox = styled('div', {
   border: '1px solid',
   borderLeft: '4px solid',
@@ -84,7 +78,11 @@ export function Embed() {
       </EmbedBuilder>
       <EmbedPreview>
         <Common.Text as='h3' size='h4' css={{marginTop: '32px'}}>Preview</Common.Text>
-        <EmbedPreviewWrap>
+        <Common.Box css={{
+          borderStyle: 'dashed',
+          borderColor: theme.colors.neutral300,
+          marginTop: '8px',
+        }}>
           <EmbedPreviewBox>
             <EmbedHeader>
               <Link href='/'>nick</Link>
@@ -94,7 +92,7 @@ export function Embed() {
               <Common.Text>widgetbot-io/hookla-frontend:master &middot; Today at 01:30</Common.Text>
             </EmbedFooter>
           </EmbedPreviewBox>
-        </EmbedPreviewWrap>
+        </Common.Box>
       </EmbedPreview>
     </>
   )
