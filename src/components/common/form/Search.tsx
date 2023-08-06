@@ -23,7 +23,7 @@ export const Search = styled(Input, {
     },
   },
 
-  '@media (max-width: 450px)': {
+  '@media (max-width: 512px)': {
     maxWidth: 'unset',
     width: '100%',
     marginLeft: 0,

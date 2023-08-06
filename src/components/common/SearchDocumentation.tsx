@@ -8,6 +8,10 @@ import * as Form from '@/components/common/form';
 const SearchWrap = styled('div', {
   position: 'relative',
   flexGrow: 1,
+
+  '@media (max-width: 512px)': {
+    width: '100%',
+  },
 });
 
 const SearchResults = styled('div', {

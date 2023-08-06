@@ -16,7 +16,7 @@ const BarWrap = styled('nav', {
   borderColor: theme.colors.neutral400,
   zIndex: 10,
 
-  '@media (max-width: 450px)': {
+  '@media (max-width: 512px)': {
     paddingBottom: '16px',
   },
 });
@@ -25,7 +25,7 @@ const Bar = styled(Container, {
   display: 'flex',
   alignItems: 'center',
 
-  '@media (max-width: 450px)': {
+  '@media (max-width: 512px)': {
     flexWrap: 'wrap',
   },
 });
@@ -56,9 +56,10 @@ const Action = styled('div', {
   display: 'flex',
   justifyContent: 'flex-end',
 
-  '@media (max-width: 450px)': {
+  '@media (max-width: 512px)': {
     flexWrap: 'wrap',
     marginTop: '-42px',
+    width: '100%',
   },
 });
 
@@ -81,7 +82,7 @@ const LoginButton = styled(Button, {
     opacity: 0.2,
   },
 
-  '@media (max-width: 450px)': {
+  '@media (max-width: 512px)': {
     order: -1,
     marginBottom: '16px',
   },
@@ -115,7 +116,7 @@ const User = styled('div', {
     color: theme.colors.red500,
   },
 
-  '@media (max-width: 450px)': {
+  '@media (max-width: 512px)': {
     order: -1,
     margin: '8px 0 16px 0',
   },
