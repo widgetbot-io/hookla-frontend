@@ -113,7 +113,12 @@ const User = styled('div', {
     display: 'block',
     textDecoration: 'none',
     color: theme.colors.red500,
-  }
+  },
+
+  '@media (max-width: 450px)': {
+    order: -1,
+    margin: '8px 0 16px 0',
+  },
 });
 
 export function Navbar() {
