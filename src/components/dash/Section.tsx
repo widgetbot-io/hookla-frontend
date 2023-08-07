@@ -10,11 +10,19 @@ type SectionProps = {
 
 const SectionWrap = styled('section', {
   display: 'flex',
+
+  '@media (max-width: 1100px)': {
+    flexDirection: 'column',
+  },
 });
 
 const SectionHeading = styled('div', {
   width: '100%',
   maxWidth: '240px',
+
+  '@media (max-width: 1100px)': {
+    marginBottom: '16px',
+  },
 });
 
 const SectionBody = styled('div', {

@@ -12,7 +12,7 @@ export default function Page() {
       </Dash.Heading>
       <Dash.Section title='Meta.' desc='Information to identify your webhook.'>
         <Form.Input type='text' label='Name' placeholder='WidgetBot' />
-        <Form.Input css={{marginTop: '32px'}} type='textarea' label='Description' placeholder='WidgetBot is cool.' />
+        <Form.Input css={{marginTop: '8px'}} type='textarea' label='Description' placeholder='WidgetBot is cool.' />
       </Dash.Section>
     </>
   )

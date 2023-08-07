@@ -33,7 +33,16 @@ const Container = styled(Common.Container, {
     backgroundColor: theme.colors.green500,
     backgroundImage: 'url(/graph.svg)',
     zIndex: -1,
-  }
+  },
+
+  '@media (max-width: 1000px)': {
+    flexDirection: 'column',
+
+    '& > div': {
+      width: '100%',
+      marginBottom: '16px',
+    }
+  },
 });
 
 export default function RootLayout({children}: Props) {
