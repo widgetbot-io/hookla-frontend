@@ -7,19 +7,22 @@ export const Search = styled(Input, {
   textOverflow: 'ellipsis',
   fontSize: theme.fontSizes.xsmall,
   borderColor: theme.colors.neutral500,
-  margin: '0 auto 0 16px',
   backgroundImage: 'url(/search.svg)',
   backgroundRepeat: 'no-repeat',
   backgroundPosition: '16px center',
   paddingLeft: '40px',
-  maxWidth: '156px',
   width: '100%',
 
+  '&:focus': {
+    borderBottomLeftRadius: 0,
+    borderBottomRightRadius: 0,
+  },
+
   '@media (min-width: 600px)': {
+    maxWidth: '156px',
+
     '&:focus': {
       maxWidth: '512px !important',
-      borderBottomLeftRadius: 0,
-      borderBottomRightRadius: 0,
     },
   },
 

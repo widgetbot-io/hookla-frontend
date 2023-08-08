@@ -8,6 +8,7 @@ import * as Form from '@/components/common/form';
 const SearchWrap = styled('div', {
   position: 'relative',
   flexGrow: 1,
+  margin: '0 16px',
 
   '@media (max-width: 512px)': {
     width: '100%',
@@ -17,15 +18,17 @@ const SearchWrap = styled('div', {
 const SearchResults = styled('div', {
   position: 'absolute',
   top: '49px',
-  left: '16px',
   borderBottomLeftRadius: theme.radii.medium,
   borderBottomRightRadius: theme.radii.medium,
   background: theme.colors.neutral100,
   border: '1px solid',
   borderColor: theme.colors.neutral300,
-  maxWidth: '512px',
-  width: '100vw',
+  width: '100%',
   borderTopColor: theme.colors.neutral500,
+
+  '@media (min-width: 600px)': {
+    maxWidth: '512px',
+  },
 
   '& > a': {
     display: 'flex',
@@ -60,9 +63,9 @@ export function SearchDocumentation() {
     <SearchWrap>
       {display &&
           <SearchResults>
-              <Link href='/'>How to do x cool thing with Hookla</Link>
-              <Link href='/'>How to do x cool thing with Hookla</Link>
-              <Link href='/'>How to do x cool thing with Hookla</Link>
+              <Link href='/'>Result</Link>
+              <Link href='/'>Result</Link>
+              <Link href='/'>Result</Link>
           </SearchResults>
       }
       <Form.Search placeholder='Search documentation' type='search' onFocus={() => setDisplay(true)} onBlur={() => setDisplay(false)} />

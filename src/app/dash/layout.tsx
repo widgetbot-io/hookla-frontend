@@ -53,7 +53,6 @@ export default function RootLayout({children}: Props) {
       <StyleSheet/>
     </head>
     <body className={inter.className}>
-    <Common.Navbar />
     <Container>
       <Dash.Sidebar />
       <Common.Box css={{
