@@ -2,8 +2,8 @@ import { styled } from "panda/jsx";
 
 export const SearchDocumentation = styled("input", {
   base: {
-    padding: "4",
-    paddingLeft: "10",
+    padding:
+      "token(spacing.4) token(spacing.4) token(spacing.4) token(spacing.10)",
     borderRadius: "lg",
     borderWidth: "1px",
     borderColor: "neutral.500",

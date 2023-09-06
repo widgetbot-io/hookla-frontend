@@ -12,6 +12,10 @@ export default defineConfig({
   // Files to exclude
   exclude: [],
 
+  shorthands: false,
+
+  jsxStyleProps: "none",
+
   // Useful for theme customization
   theme: {
     extend: {
@@ -23,8 +27,31 @@ export default defineConfig({
             lineHeight: "1.2",
           },
         },
+        hero: {
+          description: "Hero text",
+          value: {
+            fontSize: "6xl",
+            lineHeight: "1.2",
+            fontWeight: "400",
+          },
+        },
       },
       tokens: {
+        spacing: {
+          paddingToMaxWidth: {
+            value: "2rem",
+          },
+        },
+        sizes: {
+          homeMaxWidth: {
+            value: "1200px",
+          },
+        },
+        zIndex: {
+          nav: {
+            value: 1337,
+          },
+        },
         colors: {
           neutral: {
             100: { value: "#F4F8F6" },

@@ -5,22 +5,31 @@ export const Navbar = styled("nav", {
   base: {
     position: "sticky",
     top: 0,
-    backgroundColor: "neutral.100",
-    paddingX: "4",
-    paddingTop: "6",
-    paddingBottom: "4",
+    padding:
+      "token(spacing.6) token(spacing.4) token(spacing.4) token(spacing.4)",
     display: "flex",
     flexDirection: "row",
     gap: "4",
     flexWrap: "wrap",
     justifyContent: "space-between",
+    zIndex: "nav",
+    maxWidth: "homeMaxWidth",
+    flexGrow: "1",
 
     sm: {
       flexWrap: "unset",
       justifyContent: "center",
-      paddingX: "8",
-      paddingY: "6",
+      padding: "token(spacing.6) token(spacing.paddingToMaxWidth)",
     },
+  },
+});
+
+export const NavbarContainer = styled("div", {
+  base: {
+    backgroundColor: "neutral.100",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
   },
 });
 
