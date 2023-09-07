@@ -30,7 +30,7 @@ export const HeroText = styled("div", {
     backgroundColor: "colorPalette.400",
     textStyle: "hero",
     color: "colorPalette.900",
-    padding: "8",
+    padding: "paddingToMaxWidth",
     textAlign: "center",
     display: "flex",
     alignItems: "center",

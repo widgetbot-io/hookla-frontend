@@ -3,8 +3,6 @@ import { css } from "panda/css";
 
 export const Navbar = styled("nav", {
   base: {
-    position: "sticky",
-    top: 0,
     padding:
       "token(spacing.6) token(spacing.4) token(spacing.4) token(spacing.4)",
     display: "flex",
@@ -12,7 +10,6 @@ export const Navbar = styled("nav", {
     gap: "4",
     flexWrap: "wrap",
     justifyContent: "space-between",
-    zIndex: "nav",
     maxWidth: "homeMaxWidth",
     flexGrow: "1",
 
@@ -26,6 +23,9 @@ export const Navbar = styled("nav", {
 
 export const NavbarContainer = styled("div", {
   base: {
+    position: "sticky",
+    top: 0,
+    zIndex: "nav",
     backgroundColor: "neutral.100",
     display: "flex",
     flexDirection: "row",

@@ -39,7 +39,7 @@ export default defineConfig({
       tokens: {
         spacing: {
           paddingToMaxWidth: {
-            value: "2rem",
+            value: "3rem",
           },
         },
         sizes: {
