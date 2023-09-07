@@ -12,7 +12,7 @@ export const RouteSection = styled("section", {
 
 export const RouteSectionContent = styled("div", {
   base: {
-    padding: "8",
+    padding: "paddingToMaxWidth",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",

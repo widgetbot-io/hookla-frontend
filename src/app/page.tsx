@@ -1,6 +1,7 @@
 import { Hero } from "@/components/home/Hero";
 import { WebhookInputSection } from "@/components/home/WebhookInput";
 import { RouteList } from "@/components/home/RouteList";
+import { Submit } from "@/components/home/Submit";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <WebhookInputSection />
       <RouteList />
+      <Submit />
     </main>
   );
 }
