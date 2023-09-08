@@ -1,5 +1,5 @@
 import * as Styles from "./styles";
-import { Route } from "@/components/home/Route";
+import { Route } from "@/components/common/Route";
 import Image from "next/image";
 
 function RoutePanel({ type }: { type: "dest" | "src" }) {

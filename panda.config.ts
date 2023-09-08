@@ -51,6 +51,9 @@ export default defineConfig({
           nav: {
             value: 1337,
           },
+          popup: {
+            value: 9999,
+          },
         },
         colors: {
           neutral: {

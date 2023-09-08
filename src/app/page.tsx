@@ -1,6 +1,6 @@
 import { Hero } from "@/components/home/Hero";
 import { WebhookInputSection } from "@/components/home/WebhookInput";
-import { RouteList } from "@/components/home/RouteList";
+import { RouteList } from "@/components/common/RouteList";
 import { Submit } from "@/components/home/Submit";
 
 export default function Home() {

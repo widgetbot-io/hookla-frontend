@@ -10,6 +10,7 @@
     "prepare": "panda codegen"
   },
   "dependencies": {
+    "@radix-ui/react-select": "^1.2.2",
     "@types/node": "20.5.1",
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
