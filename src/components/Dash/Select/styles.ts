@@ -1,6 +1,5 @@
 import { styled } from "panda/jsx";
 import * as Select from "@radix-ui/react-select";
-import { css } from "panda/css";
 
 export const Container = styled("div", {
   base: {
@@ -14,25 +13,12 @@ export const Trigger = styled(Select.Trigger, {
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
-    padding: "4",
+    padding: "3",
     minWidth: "250px",
     border: "1px solid token(colors.neutral.400)",
     borderRadius: "lg",
     gap: "2",
     cursor: "pointer",
-    backgroundColor: "neutral.0",
-  },
-});
-
-export const Icon = css({
-  base: {
-    backgroundColor: "colorPalette.300",
-    borderRadius: "full",
-    width: "32px",
-    height: "32px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
   },
 });
 
@@ -63,11 +49,6 @@ export const Viewport = styled(Select.Viewport, {
     flexDirection: "column",
     gap: "2",
   },
-});
-
-export const Arrow = css({
-  marginLeft: "auto",
-  transition: "translate .3s ease",
 });
 
 export const Item = styled(Select.SelectItem, {

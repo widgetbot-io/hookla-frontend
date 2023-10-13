@@ -19,6 +19,13 @@ export const Button = styled("button", {
         backgroundRepeat: "no-repeat",
         backgroundPosition: "right token(spacing.6) center",
       },
+      primary: {
+        backgroundColor: "buttons.primary",
+        color: "neutral.100",
+        padding: "token(spacing.2) token(spacing.4)",
+        borderRadius: "lg",
+        textStyle: "button",
+      },
     },
   },
 });

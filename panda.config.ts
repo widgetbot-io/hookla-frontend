@@ -27,6 +27,22 @@ export default defineConfig({
             lineHeight: "1.2",
           },
         },
+        button: {
+          description: "Button text",
+          value: {
+            fontSize: "md",
+            lineHeight: "1.2",
+            fontWeight: "500",
+          },
+        },
+        medium: {
+          description: "Medium text",
+          value: {
+            fontSize: "md",
+            lineHeight: "1.2",
+            fontWeight: "500",
+          },
+        },
         hero: {
           description: "Hero text",
           value: {
@@ -56,7 +72,14 @@ export default defineConfig({
           },
         },
         colors: {
+          grey: {
+            200: { value: "#EEEEEE" },
+          },
+          buttons: {
+            primary: { value: "#7A97FF" },
+          },
           neutral: {
+            0: { value: "#fff" },
             100: { value: "#F4F8F6" },
             200: { value: "#D9DFDB" },
             300: { value: "#BCC5C0" },

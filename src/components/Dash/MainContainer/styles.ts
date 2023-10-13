@@ -42,5 +42,7 @@ export const MainContent = styled("div", {
 export const PageContent = styled(Panel, {
   base: {
     flex: "1 0 auto",
+    display: "flex",
+    flexDirection: "column",
   },
 });
