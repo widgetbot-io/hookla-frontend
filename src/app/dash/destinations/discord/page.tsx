@@ -16,18 +16,18 @@ const SetUpChildren = styled("div", {
   },
 });
 
-function GitHubProvider() {
+function DiscordDestination() {
   const [isAuthed, setIsAuthed] = useState(false);
 
   const onConnected = useCallback(() => setIsAuthed(true), [setIsAuthed]);
 
   return (
     <>
-      <PageHeader title="GitHub" logoUrl="/logo-github.svg" hasBackButton />
+      <PageHeader title="Discord" logoUrl="/logo-discord.svg" hasBackButton />
       {isAuthed ? (
         <SetUp
-          setUpText="To finish setting up, please select the repositories to use as providers."
-          logoUrl="/logo-github.svg"
+          setUpText="To finish setting up, please select a channel to use as a destination."
+          logoUrl="/logo-discord.svg"
         >
           <SetUpChildren>
             <Select
@@ -40,9 +40,9 @@ function GitHubProvider() {
         </SetUp>
       ) : (
         <ConnectAccount
-          connectText="Please connect GitHub to get started."
-          brandName="GitHub"
-          logoUrl="/logo-github.svg"
+          connectText="Please connect Discord to get started."
+          brandName="Discord"
+          logoUrl="/logo-discord.svg"
           onConnect={onConnected}
         />
       )}
@@ -50,4 +50,4 @@ function GitHubProvider() {
   );
 }
 
-export default GitHubProvider;
+export default DiscordDestination;

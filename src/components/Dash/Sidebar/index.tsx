@@ -63,7 +63,7 @@ export function Sidebar() {
               href={href}
               iconUrl={icon}
               key={href}
-              isActive={href === pathname}
+              isActive={pathname.startsWith(href)}
             >
               {label}
             </SidebarLink>

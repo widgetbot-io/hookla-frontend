@@ -42,3 +42,24 @@ export const DestOrProviderList = styled("ul", {
     flexWrap: "wrap",
   },
 });
+
+export const ContentContainer = styled("div", {
+  base: {
+    display: "flex",
+    flexDirection: "column",
+    gap: "4",
+    justifyContent: "center",
+    alignItems: "center",
+    flex: "1 0 auto",
+  },
+});
+
+export const ContentText = styled("p", {
+  base: {
+    fontSize: "md",
+    fontWeight: "500",
+    maxWidth: "60%",
+    textWrap: "wrap",
+    textAlign: "center",
+  },
+});

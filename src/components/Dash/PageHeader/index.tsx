@@ -6,13 +6,15 @@ interface Props {
   title: string;
   subtitle?: string;
   hasBackButton?: boolean;
+  backButtonUrl?: string;
   logoUrl?: string;
 }
 
 export function PageHeader({
   title,
   subtitle,
-  hasBackButton = false,
+  backButtonUrl,
+  hasBackButton,
   logoUrl,
 }: Props) {
   return (
@@ -24,7 +26,7 @@ export function PageHeader({
         </Styles.Title>
         {subtitle && <Styles.Subtitle>{subtitle}</Styles.Subtitle>}
       </Styles.TextContainer>
-      {hasBackButton && <BackButton />}
+      {hasBackButton && <BackButton backPath={backButtonUrl} />}
     </Styles.Container>
   );
 }

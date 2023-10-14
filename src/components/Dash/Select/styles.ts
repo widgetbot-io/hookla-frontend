@@ -19,6 +19,7 @@ export const Trigger = styled(Select.Trigger, {
     borderRadius: "lg",
     gap: "2",
     cursor: "pointer",
+    backgroundColor: "neutral.0",
   },
 });
 

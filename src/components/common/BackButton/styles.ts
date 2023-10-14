@@ -1,6 +1,7 @@
 import { styled } from "panda/jsx";
+import Link from "next/link";
 
-export const BackButton = styled("button", {
+export const BackButton = styled(Link, {
   base: {
     borderColor: "neutral.300",
     borderStyle: "solid",
