@@ -4,20 +4,19 @@ export const SearchDocumentation = styled("input", {
   base: {
     padding:
       "token(spacing.4) token(spacing.4) token(spacing.4) token(spacing.10)",
-    borderRadius: "lg",
-    borderWidth: "1px",
-    borderColor: "neutral.500",
+    inputBorder: true,
     boxSizing: "border-box",
-    backgroundColor: "neutral.100",
+    backgroundColor: "input.bg",
     fontSize: "sm",
     lineHeight: "1",
     backgroundImage: "url('/search.svg')",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "token(spacing.4) center",
     outline: "none",
+    color: "text.primary",
 
     _placeholder: {
-      color: "neutral.500",
+      color: "input.placeholder",
     },
   },
 });

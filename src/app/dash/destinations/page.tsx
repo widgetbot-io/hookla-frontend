@@ -1,4 +1,5 @@
-import { PageHeader } from "@/components/Dash/PageHeader";
+import { PageHeader } from "@/components/common/PageHeader";
+import { GraphNodeList, DiscordDestination } from "@/components/Dash/GraphNode";
 
 function Destinations() {
   return (
@@ -7,6 +8,9 @@ function Destinations() {
         title="Destinations"
         subtitle="Define your destinations for the WidgetBot webhook here."
       />
+      <GraphNodeList>
+        <DiscordDestination />
+      </GraphNodeList>
     </>
   );
 }

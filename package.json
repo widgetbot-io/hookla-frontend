@@ -22,7 +22,7 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
-    "@pandacss/dev": "^0.11.1",
+    "@pandacss/dev": "^0.16.0",
     "prettier": "^3.0.2"
   }
 }

@@ -5,16 +5,14 @@ import { css } from "panda/css";
 export const Notification = styled(Box, {
   base: {
     padding: "6",
-    display: "flex",
-    flexDirection: "column",
+    displayFlex: "column",
     gap: "2",
   },
 });
 
 export const NotificationSection = styled("div", {
   base: {
-    display: "flex",
-    flexDirection: "row",
+    displayFlex: "row",
     alignItems: "center",
     gap: "2",
     textStyle: "normal",

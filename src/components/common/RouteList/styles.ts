@@ -3,9 +3,8 @@ import { css } from "panda/css";
 
 export const RouteSection = styled("section", {
   base: {
-    display: "flex",
+    displayFlex: "row",
     width: "100%",
-    flexDirection: "row",
     justifyContent: "center",
   },
 });
@@ -13,8 +12,7 @@ export const RouteSection = styled("section", {
 export const RouteSectionContent = styled("div", {
   base: {
     padding: "paddingToMaxWidth",
-    display: "flex",
-    flexDirection: "column",
+    displayFlex: "column",
     justifyContent: "center",
     width: "homeMaxWidth",
     gap: "14",
@@ -27,8 +25,7 @@ export const RouteSectionContent = styled("div", {
 
 export const ListContainer = styled("div", {
   base: {
-    display: "flex",
-    flexDirection: "column",
+    displayFlex: "column",
     gap: "8",
     flex: "1 0 auto",
   },
@@ -36,8 +33,7 @@ export const ListContainer = styled("div", {
 
 export const ListHeader = styled("div", {
   base: {
-    display: "flex",
-    flexDirection: "column",
+    displayFlex: "column",
   },
 });
 
@@ -57,8 +53,7 @@ export const ListSubtitle = styled("p", {
 
 export const List = styled("ul", {
   base: {
-    display: "flex",
-    flexDirection: "column",
+    displayFlex: "column",
     gap: "2",
   },
 });

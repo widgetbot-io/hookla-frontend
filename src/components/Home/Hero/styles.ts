@@ -2,10 +2,9 @@ import { styled } from "panda/jsx";
 
 export const HeroContainer = styled("section", {
   base: {
-    display: "flex",
+    displayFlex: "row",
     width: "100%",
     height: "700px",
-    flexDirection: "row",
     justifyContent: "center",
     backgroundColor: "colorPalette.500",
     backgroundImage: "url(/graph.svg)",
@@ -14,8 +13,7 @@ export const HeroContainer = styled("section", {
 
 export const HeroContent = styled("div", {
   base: {
-    display: "flex",
-    flexDirection: "column",
+    displayFlex: "column",
     alignItems: "center",
     maxWidth: "homeMaxWidth",
 

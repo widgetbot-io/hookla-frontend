@@ -3,8 +3,7 @@ import { Panel } from "@/components/Dash/Panel";
 
 export const MainContainer = styled("main", {
   base: {
-    display: "flex",
-    flexDirection: "column",
+    displayFlex: "column",
     alignItems: "center",
     marginBottom: "8",
 
@@ -23,8 +22,7 @@ export const MainContainer = styled("main", {
 
 export const MainContent = styled("div", {
   base: {
-    display: "flex",
-    flexDirection: "column",
+    displayFlex: "column",
     justifyContent: "center",
     gap: "8",
     maxWidth: "homeMaxWidth",
@@ -33,7 +31,7 @@ export const MainContent = styled("div", {
     paddingRight: "paddingToMaxWidth",
     width: "100%",
 
-    md: {
+    lg: {
       flexDirection: "row",
     },
   },
@@ -42,5 +40,6 @@ export const MainContent = styled("div", {
 export const PageContent = styled(Panel, {
   base: {
     flex: "1 0 auto",
+    displayFlex: "column",
   },
 });

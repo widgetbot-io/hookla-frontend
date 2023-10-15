@@ -1,6 +1,5 @@
 import { styled } from "panda/jsx";
 import * as Select from "@radix-ui/react-select";
-import { css } from "panda/css";
 
 export const Container = styled("div", {
   base: {
@@ -13,26 +12,27 @@ export const Trigger = styled(Select.Trigger, {
     colorPalette: "neutral",
     displayFlex: "row",
     alignItems: "center",
-    padding: "4",
     minWidth: "200px",
-    width: "100%",
     inputBorder: true,
+    borderRadius: "input",
     gap: "2",
     cursor: "pointer",
     backgroundColor: "input.bg",
-    color: "text.primary",
   },
-});
-
-export const Icon = css({
-  base: {
-    backgroundColor: "colorPalette.300",
-    borderRadius: "full",
-    width: "32px",
-    height: "32px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
+  variants: {
+    size: {
+      sm: {
+        paddingY: "1",
+        paddingLeft: "3",
+        paddingRight: "2",
+      },
+      md: {
+        padding: "3",
+      },
+    },
+  },
+  defaultVariants: {
+    size: "md",
   },
 });
 
@@ -51,10 +51,10 @@ export const Content = styled(Select.Content, {
     width: "100%",
     border: "1px solid token(colors.borders.normal)",
     borderRadius: "input",
+    gap: "2",
     padding: "2",
     zIndex: "popup",
     boxShadow: "md",
-    color: "text.primary",
   },
 });
 
@@ -63,11 +63,6 @@ export const Viewport = styled(Select.Viewport, {
     displayFlex: "column",
     gap: "2",
   },
-});
-
-export const Arrow = css({
-  marginLeft: "auto",
-  transition: "translate .3s ease",
 });
 
 export const Item = styled(Select.SelectItem, {

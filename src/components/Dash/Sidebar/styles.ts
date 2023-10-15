@@ -4,8 +4,7 @@ import Link from "next/link";
 
 export const Sidebar = styled(Panel, {
   base: {
-    display: "flex",
-    flexDirection: "column",
+    displayFlex: "column",
     gap: "6",
   },
 });
@@ -14,7 +13,7 @@ export const Section = styled("div", {});
 
 export const Label = styled("p", {
   base: {
-    color: "neutral.600",
+    color: "text.secondary",
     fontSize: "sm",
     marginBottom: "2",
   },
@@ -22,21 +21,19 @@ export const Label = styled("p", {
 
 export const Nav = styled("div", {
   base: {
-    display: "flex",
-    flexDirection: "column",
+    displayFlex: "column",
     gap: "2",
   },
 });
 
 export const NavLink = styled(Link, {
   base: {
-    padding: "4",
+    padding: "token(spacing.4) 64px token(spacing.4) token(spacing.4)",
     borderRadius: "lg",
     border: "1px solid token(colors.neutral.300)",
-    backgroundColor: "neutral.200",
-    display: "flex",
+    backgroundColor: "input.bg",
+    displayFlex: "row",
     alignItems: "center",
-    flexDirection: "row",
     gap: "2",
     colorPalette: "neutral",
     transition:
@@ -45,6 +42,7 @@ export const NavLink = styled(Link, {
     backgroundRepeat: "no-repeat",
     backgroundPosition: "right token(spacing.4) center",
     userSelect: "none",
+    color: "text.primary",
 
     _hover: {
       boxShadow: "md",
@@ -72,7 +70,7 @@ export const NavIcon = styled("div", {
     width: "32px",
     height: "32px",
     borderRadius: "full",
-    backgroundColor: "colorPalette.300",
+    backgroundColor: "colorPalette.100",
     border: "1px solid token(colors.colorPalette.400)",
     display: "flex",
     justifyContent: "center",

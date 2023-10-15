@@ -23,31 +23,18 @@ function SidebarLink({ href, children, iconUrl, isActive }: SidebarLinkProps) {
   );
 }
 
-export function Sidebar() {
-  const pathname = usePathname();
+export interface SidebarLink {
+  href: string;
+  label: string;
+  icon: `/${string}`;
+}
 
-  const links = [
-    {
-      href: "/dash/providers",
-      label: "Providers",
-      icon: "/providers.svg",
-    },
-    {
-      href: "/dash/destinations",
-      label: "Destinations",
-      icon: "/destinations.svg",
-    },
-    {
-      href: "/dash/embed-builder",
-      label: "Embed Builder",
-      icon: "/embed.svg",
-    },
-    {
-      href: "/dash/settings",
-      label: "Settings",
-      icon: "/settings.svg",
-    },
-  ];
+interface Props {
+  links: Array<SidebarLink>;
+}
+
+export function Sidebar({ links }: Props) {
+  const pathname = usePathname();
 
   return (
     <Styles.Sidebar>
@@ -63,7 +50,7 @@ export function Sidebar() {
               href={href}
               iconUrl={icon}
               key={href}
-              isActive={href === pathname}
+              isActive={pathname.startsWith(href)}
             >
               {label}
             </SidebarLink>

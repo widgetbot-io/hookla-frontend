@@ -4,8 +4,7 @@ import { css } from "panda/css";
 export const Route = styled("label", {
   base: {
     padding: "8",
-    display: "flex",
-    flexDirection: "row",
+    displayFlex: "row",
     alignItems: "center",
     gap: "4",
     cursor: "pointer",
@@ -15,8 +14,7 @@ export const Route = styled("label", {
 
 export const RouteInfo = styled("div", {
   base: {
-    display: "flex",
-    flexDirection: "column",
+    displayFlex: "column",
     alignItems: "flex-start",
     justifyContent: "center",
     gap: "1",

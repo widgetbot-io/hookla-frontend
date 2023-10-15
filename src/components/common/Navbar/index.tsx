@@ -7,7 +7,7 @@ export function Navbar() {
     <Styles.NavbarContainer>
       <Styles.Navbar>
         <Styles.LogoContainer>
-          <Image src="logo.svg" alt="logo" width={32} height={32} />
+          <Image src="/logo.svg" alt="logo" width={32} height={32} />
           <Styles.LogoText>
             <Styles.Title>Hookla</Styles.Title>
             <Styles.Slogan>Keep your community informed.</Styles.Slogan>

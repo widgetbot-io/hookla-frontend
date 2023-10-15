@@ -1,4 +1,4 @@
-import { NotificationList } from "@/components/home/NotificationList";
+import { NotificationList } from "@/components/Home/NotificationList";
 import * as Styles from "./styles";
 import { css } from "panda/css";
 

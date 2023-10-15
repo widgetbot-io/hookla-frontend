@@ -3,9 +3,8 @@ import { styled } from "panda/jsx";
 
 export const SubmitSection = styled("section", {
   base: {
-    display: "flex",
+    displayFlex: "row",
     width: "100%",
-    flexDirection: "row",
     justifyContent: "center",
   },
 });
@@ -21,8 +20,7 @@ export const SubmitBoxContainer = styled("div", {
 export const SubmitBox = styled(Box, {
   base: {
     padding: "8",
-    display: "flex",
-    flexDirection: "column",
+    displayFlex: "column",
     gap: "2",
     alignItems: "flex-start",
 

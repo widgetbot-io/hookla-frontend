@@ -16,6 +16,65 @@ export default defineConfig({
 
   jsxStyleProps: "none",
 
+  utilities: {
+    displayFlex: {
+      className: "flex",
+      values: ["column", "row", "start"],
+      transform(value) {
+        return {
+          display: "flex",
+          flexDirection: value,
+        };
+      },
+    },
+    paddingX: {
+      className: "padding-x",
+      values: "spacing",
+      transform(value: string) {
+        return {
+          paddingLeft: value,
+          paddingRight: value,
+        };
+      },
+    },
+    paddingY: {
+      className: "padding-y",
+      values: "spacing",
+      transform(value: string) {
+        return {
+          paddingTop: value,
+          paddingBottom: value,
+        };
+      },
+    },
+    inputBorder: {
+      className: "input-border",
+      values: { type: "boolean" },
+      transform(value: boolean, { token }) {
+        if (!value) return {};
+
+        return {
+          borderWidth: "1px",
+          borderColor: token("colors.borders.normal"),
+          borderStyle: "solid",
+          borderRadius: token("radii.input"),
+          outline: "none",
+          transition: `border-color ${token("durations.fast")}`,
+
+          "&:not([disabled])": {
+            "&:hover:not(:focus)": {
+              borderColor: token("colors.borders.hover"),
+            },
+
+            "&:focus": {
+              borderColor: token("colors.borders.focus"),
+            },
+          },
+        };
+      },
+    },
+  },
+
   // Useful for theme customization
   theme: {
     extend: {
@@ -25,6 +84,22 @@ export default defineConfig({
           value: {
             fontSize: "sm",
             lineHeight: "1.2",
+          },
+        },
+        button: {
+          description: "Button text",
+          value: {
+            fontSize: "sm",
+            lineHeight: "1.2",
+            fontWeight: "500",
+          },
+        },
+        medium: {
+          description: "Medium text",
+          value: {
+            fontSize: "md",
+            lineHeight: "1.2",
+            fontWeight: "500",
           },
         },
         hero: {
@@ -37,6 +112,15 @@ export default defineConfig({
         },
       },
       tokens: {
+        durations: {
+          fast: { value: "150ms" },
+          normal: { value: "300ms" },
+        },
+        radii: {
+          input: {
+            value: "{radii.lg}",
+          },
+        },
         spacing: {
           paddingToMaxWidth: {
             value: "3rem",
@@ -56,6 +140,30 @@ export default defineConfig({
           },
         },
         colors: {
+          grey: {
+            200: { value: "#EEEEEE" },
+          },
+          buttons: {
+            primary: { value: "#7A97FF" },
+            danger: { value: "#FF6868" },
+          },
+          input: {
+            bg: {
+              value: "#fff",
+            },
+            placeholder: {
+              value: "#ACACAC",
+            },
+          },
+          borders: {
+            normal: { value: "#BCC5C0" },
+            hover: { value: "#707070" },
+            focus: { value: "black" },
+          },
+          text: {
+            primary: { value: "#343434" },
+            secondary: { value: "#535353" },
+          },
           neutral: {
             100: { value: "#F4F8F6" },
             200: { value: "#D9DFDB" },
