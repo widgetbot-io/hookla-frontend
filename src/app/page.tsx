@@ -1,7 +1,7 @@
-import { Hero } from "@/components/home/Hero";
-import { WebhookInputSection } from "@/components/home/WebhookInput";
+import { Hero } from "@/components/Home/Hero";
+import { WebhookInputSection } from "@/components/Home/WebhookInput";
 import { RouteList } from "@/components/common/RouteList";
-import { Submit } from "@/components/home/Submit";
+import { Submit } from "@/components/Home/Submit";
 
 export default function Home() {
   return (

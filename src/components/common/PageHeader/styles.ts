@@ -12,17 +12,25 @@ export const Container = styled("div", {
 
 export const TextContainer = styled("div", {
   base: {
-    display: "flex",
+    displayFlex: "column",
     gap: "1",
-    flexDirection: "column",
+  },
+});
+
+export const TitleText = styled("span", {
+  base: {
+    display: "none",
+
+    sm: {
+      display: "unset",
+    },
   },
 });
 
 export const Title = styled("p", {
   base: {
     fontSize: "2xl",
-    display: "flex",
-    flexDirection: "row",
+    displayFlex: "row",
     gap: "3",
     fontWeight: "500",
     color: "text.primary",

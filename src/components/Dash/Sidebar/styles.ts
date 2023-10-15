@@ -4,8 +4,7 @@ import Link from "next/link";
 
 export const Sidebar = styled(Panel, {
   base: {
-    display: "flex",
-    flexDirection: "column",
+    displayFlex: "column",
     gap: "6",
   },
 });
@@ -22,21 +21,19 @@ export const Label = styled("p", {
 
 export const Nav = styled("div", {
   base: {
-    display: "flex",
-    flexDirection: "column",
+    displayFlex: "column",
     gap: "2",
   },
 });
 
 export const NavLink = styled(Link, {
   base: {
-    padding: "4",
+    padding: "token(spacing.4) 64px token(spacing.4) token(spacing.4)",
     borderRadius: "lg",
     border: "1px solid token(colors.neutral.300)",
     backgroundColor: "input.bg",
-    display: "flex",
+    displayFlex: "row",
     alignItems: "center",
-    flexDirection: "row",
     gap: "2",
     colorPalette: "neutral",
     transition:

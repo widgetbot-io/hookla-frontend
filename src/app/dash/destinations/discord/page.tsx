@@ -1,20 +1,12 @@
 "use client";
 
-import { PageHeader } from "@/components/Dash/PageHeader";
+import { PageHeader } from "@/components/common/PageHeader";
 import { ConnectAccount } from "@/components/Dash/ConnectAccount";
 import { useCallback, useState } from "react";
 import { SetUp } from "@/components/Dash/SetUp";
-import { Select } from "@/components/Dash/Select";
+import { Option, Select } from "@/components/Dash/Select";
 import { Button } from "@/components/common/Button";
-import { styled } from "panda/jsx";
-
-const SetUpChildren = styled("div", {
-  base: {
-    display: "flex",
-    flexDirection: "row",
-    gap: "4",
-  },
-});
+import { SetUpChildren } from "@/components/Dash/GraphNode";
 
 const channelNames = ["message-renderer", "hookla", "github-notifications"];
 const selectOptions = channelNames.map((name) => ({
@@ -36,7 +28,11 @@ function DiscordDestination() {
           logoUrl="/logo-discord.svg"
         >
           <SetUpChildren>
-            <Select options={selectOptions} />
+            <Select size="sm" value={selectOptions[0].value}>
+              {selectOptions.map(({ label, value }) => (
+                <Option value={value} label={label} />
+              ))}
+            </Select>
             <Button kind="primary">Done</Button>
           </SetUpChildren>
         </SetUp>

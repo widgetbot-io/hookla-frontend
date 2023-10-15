@@ -1,20 +1,12 @@
 "use client";
 
-import { PageHeader } from "@/components/Dash/PageHeader";
+import { PageHeader } from "@/components/common/PageHeader";
 import { ConnectAccount } from "@/components/Dash/ConnectAccount";
 import { useCallback, useState } from "react";
 import { SetUp } from "@/components/Dash/SetUp";
-import { Select } from "@/components/Dash/Select";
+import { Option, Select } from "@/components/Dash/Select";
 import { Button } from "@/components/common/Button";
-import { styled } from "panda/jsx";
-
-const SetUpChildren = styled("div", {
-  base: {
-    display: "flex",
-    flexDirection: "row",
-    gap: "4",
-  },
-});
+import { SetUpChildren } from "@/components/Dash/GraphNode";
 
 function GitHubProvider() {
   const [isAuthed, setIsAuthed] = useState(false);
@@ -30,11 +22,9 @@ function GitHubProvider() {
           logoUrl="/logo-github.svg"
         >
           <SetUpChildren>
-            <Select
-              options={[
-                { label: "message-renderer", value: "message-renderer" },
-              ]}
-            />
+            <Select size="sm" value="message-renderer">
+              <Option value="message-renderer" label="message-renderer" />
+            </Select>
             <Button kind="primary">Done</Button>
           </SetUpChildren>
         </SetUp>

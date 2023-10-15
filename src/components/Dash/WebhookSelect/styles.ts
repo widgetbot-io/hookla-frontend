@@ -11,11 +11,11 @@ export const Container = styled("div", {
 export const Trigger = styled(Select.Trigger, {
   base: {
     colorPalette: "neutral",
-    display: "flex",
-    flexDirection: "row",
+    displayFlex: "row",
     alignItems: "center",
     padding: "4",
-    minWidth: "250px",
+    minWidth: "200px",
+    width: "100%",
     inputBorder: true,
     gap: "2",
     cursor: "pointer",
@@ -60,8 +60,7 @@ export const Content = styled(Select.Content, {
 
 export const Viewport = styled(Select.Viewport, {
   base: {
-    display: "flex",
-    flexDirection: "column",
+    displayFlex: "column",
     gap: "2",
   },
 });
@@ -73,8 +72,7 @@ export const Arrow = css({
 
 export const Item = styled(Select.SelectItem, {
   base: {
-    display: "flex",
-    flexDirection: "row",
+    displayFlex: "row",
     alignItems: "center",
     padding: "4",
     gap: "2",

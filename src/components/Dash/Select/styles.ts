@@ -10,16 +10,29 @@ export const Container = styled("div", {
 export const Trigger = styled(Select.Trigger, {
   base: {
     colorPalette: "neutral",
-    display: "flex",
-    flexDirection: "row",
+    displayFlex: "row",
     alignItems: "center",
-    padding: "3",
-    minWidth: "250px",
+    minWidth: "200px",
     inputBorder: true,
     borderRadius: "input",
     gap: "2",
     cursor: "pointer",
     backgroundColor: "input.bg",
+  },
+  variants: {
+    size: {
+      sm: {
+        paddingY: "1",
+        paddingLeft: "3",
+        paddingRight: "2",
+      },
+      md: {
+        padding: "3",
+      },
+    },
+  },
+  defaultVariants: {
+    size: "md",
   },
 });
 
@@ -47,16 +60,14 @@ export const Content = styled(Select.Content, {
 
 export const Viewport = styled(Select.Viewport, {
   base: {
-    display: "flex",
-    flexDirection: "column",
+    displayFlex: "column",
     gap: "2",
   },
 });
 
 export const Item = styled(Select.SelectItem, {
   base: {
-    display: "flex",
-    flexDirection: "row",
+    displayFlex: "row",
     alignItems: "center",
     padding: "4",
     gap: "2",

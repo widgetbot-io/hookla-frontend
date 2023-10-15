@@ -22,7 +22,7 @@ export function PageHeader({
       <Styles.TextContainer>
         <Styles.Title hasBackButton={hasBackButton}>
           {logoUrl && <Image src={logoUrl} alt="" width={32} height={32} />}{" "}
-          {title}
+          <Styles.TitleText>{title}</Styles.TitleText>
         </Styles.Title>
         {subtitle && <Styles.Subtitle>{subtitle}</Styles.Subtitle>}
       </Styles.TextContainer>

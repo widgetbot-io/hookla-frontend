@@ -59,8 +59,7 @@ export const NotificationListContainer = styled("div", {
 
 export const NotificationList = styled("ul", {
   base: {
-    display: "flex",
-    flexDirection: "column",
+    displayFlex: "column",
     gap: "4",
     translate: "0 -10%",
   },

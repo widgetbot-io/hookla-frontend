@@ -1,4 +1,4 @@
-import { PageHeader } from "@/components/Dash/PageHeader";
+import { PageHeader } from "@/components/common/PageHeader";
 
 function EmbedBuilder() {
   return (

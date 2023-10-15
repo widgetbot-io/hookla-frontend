@@ -1,8 +1,5 @@
-import { PageHeader } from "@/components/Dash/PageHeader";
-import {
-  DestOrProviderList,
-  GithubProvider,
-} from "@/components/Dash/DestinationOrProvider";
+import { PageHeader } from "@/components/common/PageHeader";
+import { GraphNodeList, GithubProvider } from "@/components/Dash/GraphNode";
 
 function Providers() {
   return (
@@ -11,9 +8,9 @@ function Providers() {
         title="Providers"
         subtitle="Define your providers for the WidgetBot webhook here."
       />
-      <DestOrProviderList>
+      <GraphNodeList>
         <GithubProvider />
-      </DestOrProviderList>
+      </GraphNodeList>
     </>
   );
 }

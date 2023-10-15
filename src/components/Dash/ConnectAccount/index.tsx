@@ -1,4 +1,4 @@
-import * as ContentStyles from "../DestinationOrProvider";
+import * as ContentStyles from "../GraphNode";
 import { Button } from "@/components/common/Button";
 import Image from "next/image";
 

@@ -1,4 +1,4 @@
-import * as Styles from "@/components/home/Submit/styles";
+import * as Styles from "@/components/Home/Submit/styles";
 import { token } from "panda/tokens";
 import { Button } from "@/components/common/Button";
 

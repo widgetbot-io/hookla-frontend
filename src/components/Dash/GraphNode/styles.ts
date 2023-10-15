@@ -1,14 +1,25 @@
 import { styled } from "panda/jsx";
 import Link from "next/link";
 
+export const SetUpChildren = styled("div", {
+  base: {
+    displayFlex: "column",
+    gap: "4",
+    alignItems: "center",
+
+    sm: {
+      flexDirection: "row",
+    },
+  },
+});
+
 export const Container = styled(Link, {
   base: {
     border: "1px solid token(colors.neutral.300)",
     borderRadius: "lg",
     backgroundColor: "input.bg",
     overflow: "hidden",
-    display: "flex",
-    flexDirection: "column",
+    displayFlex: "column",
     padding: "8",
     alignItems: "center",
     gap: "4",
@@ -39,18 +50,16 @@ export const BrandName = styled("p", {
   },
 });
 
-export const DestOrProviderList = styled("ul", {
+export const GraphNodeList = styled("ul", {
   base: {
-    display: "flex",
-    flexDirection: "row",
+    displayFlex: "row",
     flexWrap: "wrap",
   },
 });
 
 export const ContentContainer = styled("div", {
   base: {
-    display: "flex",
-    flexDirection: "column",
+    displayFlex: "column",
     gap: "4",
     justifyContent: "center",
     alignItems: "center",

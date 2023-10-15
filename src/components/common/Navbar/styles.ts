@@ -5,8 +5,7 @@ export const Navbar = styled("nav", {
   base: {
     padding:
       "token(spacing.6) token(spacing.4) token(spacing.4) token(spacing.4)",
-    display: "flex",
-    flexDirection: "row",
+    displayFlex: "row",
     gap: "4",
     flexWrap: "wrap",
     justifyContent: "space-between",
@@ -27,8 +26,7 @@ export const NavbarContainer = styled("div", {
     top: 0,
     zIndex: "nav",
     backgroundColor: "neutral.100",
-    display: "flex",
-    flexDirection: "row",
+    displayFlex: "row",
     justifyContent: "center",
   },
 });
@@ -44,8 +42,7 @@ export const LogoContainer = styled("div", {
 
 export const LogoText = styled("div", {
   base: {
-    display: "flex",
-    flexDirection: "column",
+    displayFlex: "column",
     gap: "0.5",
   },
 });
@@ -63,7 +60,7 @@ export const Slogan = styled("p", {
     color: "magenta.400",
     textWrap: "nowrap",
 
-    hideBelow: "sm",
+    hideBelow: "md",
   },
 });
 
@@ -86,8 +83,7 @@ export const UserAvatar = css({
 
 export const UserText = styled("div", {
   base: {
-    display: "flex",
-    flexDirection: "column",
+    displayFlex: "column",
     gap: "0.5",
     hideBelow: "sm",
   },
@@ -112,8 +108,7 @@ export const SearchContainer = styled("div", {
     boxSizing: "border-box",
     order: 2,
     flexBasis: "100%",
-    display: "flex",
-    flexDirection: "column",
+    displayFlex: "column",
     alignItems: "stretch",
 
     sm: {

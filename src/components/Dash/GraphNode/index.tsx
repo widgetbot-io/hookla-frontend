@@ -3,7 +3,12 @@
 import * as Styles from "./styles";
 import Image from "next/image";
 
-export { DestOrProviderList, ContentContainer, ContentText } from "./styles";
+export {
+  GraphNodeList,
+  ContentContainer,
+  ContentText,
+  SetUpChildren,
+} from "./styles";
 
 interface Props {
   brandName: string;
@@ -12,12 +17,7 @@ interface Props {
   group: "destinations" | "providers";
 }
 
-export function DestinationOrProvider({
-  brandName,
-  logoUrl,
-  destination,
-  group,
-}: Props) {
+export function GraphNode({ brandName, logoUrl, destination, group }: Props) {
   return (
     <Styles.Container href={`/dash/${group}/${destination}`}>
       <Styles.LogoContainer>
@@ -30,7 +30,7 @@ export function DestinationOrProvider({
 
 export function GithubProvider() {
   return (
-    <DestinationOrProvider
+    <GraphNode
       brandName="GitHub"
       logoUrl="/logo-github.svg"
       destination="github"
@@ -41,7 +41,7 @@ export function GithubProvider() {
 
 export function DiscordDestination() {
   return (
-    <DestinationOrProvider
+    <GraphNode
       brandName="Discord"
       logoUrl="/logo-discord.svg"
       destination="discord"

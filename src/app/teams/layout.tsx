@@ -11,26 +11,16 @@ interface Props {
   children: ReactNode;
 }
 
-function DashLayout({ children }: Props) {
+function TeamsLayout({ children }: Props) {
   const links: Array<SidebarLink> = [
     {
-      href: "/dash/providers",
-      label: "Providers",
-      icon: "/providers.svg",
+      label: "Users",
+      href: "/teams/users",
+      icon: "/person.svg",
     },
     {
-      href: "/dash/destinations",
-      label: "Destinations",
-      icon: "/destinations.svg",
-    },
-    {
-      href: "/dash/embed-builder",
-      label: "Embed Builder",
-      icon: "/embed.svg",
-    },
-    {
-      href: "/dash/settings",
       label: "Settings",
+      href: "/teams/settings",
       icon: "/settings.svg",
     },
   ];
@@ -45,4 +35,4 @@ function DashLayout({ children }: Props) {
   );
 }
 
-export default DashLayout;
+export default TeamsLayout;

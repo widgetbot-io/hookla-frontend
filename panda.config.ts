@@ -17,6 +17,36 @@ export default defineConfig({
   jsxStyleProps: "none",
 
   utilities: {
+    displayFlex: {
+      className: "flex",
+      values: ["column", "row", "start"],
+      transform(value) {
+        return {
+          display: "flex",
+          flexDirection: value,
+        };
+      },
+    },
+    paddingX: {
+      className: "padding-x",
+      values: "spacing",
+      transform(value: string) {
+        return {
+          paddingLeft: value,
+          paddingRight: value,
+        };
+      },
+    },
+    paddingY: {
+      className: "padding-y",
+      values: "spacing",
+      transform(value: string) {
+        return {
+          paddingTop: value,
+          paddingBottom: value,
+        };
+      },
+    },
     inputBorder: {
       className: "input-border",
       values: { type: "boolean" },
@@ -31,12 +61,14 @@ export default defineConfig({
           outline: "none",
           transition: `border-color ${token("durations.fast")}`,
 
-          "&:hover:not(:focus)": {
-            borderColor: token("colors.borders.hover"),
-          },
+          "&:not([disabled])": {
+            "&:hover:not(:focus)": {
+              borderColor: token("colors.borders.hover"),
+            },
 
-          "&:focus": {
-            borderColor: token("colors.borders.focus"),
+            "&:focus": {
+              borderColor: token("colors.borders.focus"),
+            },
           },
         };
       },
@@ -57,7 +89,7 @@ export default defineConfig({
         button: {
           description: "Button text",
           value: {
-            fontSize: "md",
+            fontSize: "sm",
             lineHeight: "1.2",
             fontWeight: "500",
           },
@@ -113,6 +145,7 @@ export default defineConfig({
           },
           buttons: {
             primary: { value: "#7A97FF" },
+            danger: { value: "#FF6868" },
           },
           input: {
             bg: {
