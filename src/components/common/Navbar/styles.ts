@@ -53,6 +53,7 @@ export const LogoText = styled("div", {
 export const Title = styled("h1", {
   base: {
     textStyle: "normal",
+    color: "text.primary",
   },
 });
 
@@ -95,6 +96,7 @@ export const UserText = styled("div", {
 export const WelcomeUsername = styled("p", {
   base: {
     textStyle: "normal",
+    color: "text.primary",
   },
 });
 

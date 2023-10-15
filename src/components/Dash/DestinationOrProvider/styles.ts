@@ -5,15 +5,18 @@ export const Container = styled(Link, {
   base: {
     border: "1px solid token(colors.neutral.300)",
     borderRadius: "lg",
-    backgroundColor: "neutral.0",
+    backgroundColor: "input.bg",
     overflow: "hidden",
     display: "flex",
     flexDirection: "column",
     padding: "8",
-    color: "neutral.900",
     alignItems: "center",
     gap: "4",
     cursor: "pointer",
+
+    _hover: {
+      borderColor: "borders.hover",
+    },
   },
 });
 
@@ -32,6 +35,7 @@ export const LogoContainer = styled("div", {
 export const BrandName = styled("p", {
   base: {
     textStyle: "normal",
+    color: "text.primary",
   },
 });
 
@@ -61,5 +65,6 @@ export const ContentText = styled("p", {
     maxWidth: "60%",
     textWrap: "wrap",
     textAlign: "center",
+    color: "text.primary",
   },
 });

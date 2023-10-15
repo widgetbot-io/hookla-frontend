@@ -16,6 +16,12 @@ const SetUpChildren = styled("div", {
   },
 });
 
+const channelNames = ["message-renderer", "hookla", "github-notifications"];
+const selectOptions = channelNames.map((name) => ({
+  label: name,
+  value: name,
+}));
+
 function DiscordDestination() {
   const [isAuthed, setIsAuthed] = useState(false);
 
@@ -30,11 +36,7 @@ function DiscordDestination() {
           logoUrl="/logo-discord.svg"
         >
           <SetUpChildren>
-            <Select
-              options={[
-                { label: "message-renderer", value: "message-renderer" },
-              ]}
-            />
+            <Select options={selectOptions} />
             <Button kind="primary">Done</Button>
           </SetUpChildren>
         </SetUp>

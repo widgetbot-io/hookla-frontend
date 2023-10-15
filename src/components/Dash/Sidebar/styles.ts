@@ -14,7 +14,7 @@ export const Section = styled("div", {});
 
 export const Label = styled("p", {
   base: {
-    color: "neutral.600",
+    color: "text.secondary",
     fontSize: "sm",
     marginBottom: "2",
   },
@@ -33,7 +33,7 @@ export const NavLink = styled(Link, {
     padding: "4",
     borderRadius: "lg",
     border: "1px solid token(colors.neutral.300)",
-    backgroundColor: "neutral.0",
+    backgroundColor: "input.bg",
     display: "flex",
     alignItems: "center",
     flexDirection: "row",
@@ -45,6 +45,7 @@ export const NavLink = styled(Link, {
     backgroundRepeat: "no-repeat",
     backgroundPosition: "right token(spacing.4) center",
     userSelect: "none",
+    color: "text.primary",
 
     _hover: {
       boxShadow: "md",

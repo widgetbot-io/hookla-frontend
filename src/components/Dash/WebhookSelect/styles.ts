@@ -16,11 +16,11 @@ export const Trigger = styled(Select.Trigger, {
     alignItems: "center",
     padding: "4",
     minWidth: "250px",
-    border: "1px solid token(colors.neutral.400)",
-    borderRadius: "lg",
+    inputBorder: true,
     gap: "2",
     cursor: "pointer",
-    backgroundColor: "neutral.0",
+    backgroundColor: "input.bg",
+    color: "text.primary",
   },
 });
 
@@ -49,11 +49,12 @@ export const Content = styled(Select.Content, {
     colorPalette: "neutral",
     backgroundColor: "neutral.100",
     width: "100%",
-    border: "1px solid token(colors.neutral.400)",
-    borderRadius: "lg",
+    border: "1px solid token(colors.borders.normal)",
+    borderRadius: "input",
     padding: "2",
     zIndex: "popup",
     boxShadow: "md",
+    color: "text.primary",
   },
 });
 

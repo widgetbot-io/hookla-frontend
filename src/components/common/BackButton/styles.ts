@@ -10,12 +10,12 @@ export const BackButton = styled(Link, {
     borderRadius: "full",
     width: "40px",
     height: "40px",
-    backgroundColor: "neutral.0",
+    backgroundColor: "input.bg",
     backgroundPosition: "center center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "60%",
     cursor: "pointer",
-    transition: "border-color 300ms",
+    transition: "border-color token(durations.fast)",
 
     "&:hover": {
       borderColor: "neutral.900",

@@ -21,11 +21,11 @@ export const TextContainer = styled("div", {
 export const Title = styled("p", {
   base: {
     fontSize: "2xl",
-    color: "neutral.900",
     display: "flex",
     flexDirection: "row",
     gap: "3",
     fontWeight: "500",
+    color: "text.primary",
   },
   variants: {
     hasBackButton: {
@@ -41,7 +41,7 @@ export const Title = styled("p", {
 
 export const Subtitle = styled("p", {
   base: {
-    color: "neutral.700",
+    color: "text.secondary",
     fontSize: "md",
   },
 });

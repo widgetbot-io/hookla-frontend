@@ -1,4 +1,6 @@
 import { PageHeader } from "@/components/Dash/PageHeader";
+import React from "react";
+import { TextInput } from "@/components/common/TextInput";
 
 function Settings() {
   return (
@@ -7,6 +9,7 @@ function Settings() {
         title="Settings"
         subtitle="Configure generic settings for your webhook."
       />
+      <TextInput placeholder="Enter webhook name..." />
     </>
   );
 }
